@@ -1,0 +1,56 @@
+设计一个游戏中的将领卡牌（card）和道具（item）交易（trade）系统。一个玩家（user）拥有很多不同卡牌和道具，数量可以>=0。玩家希望用自己不需要的卡牌去交易别人的卡牌或道具。
+要求：
+1. 玩家的每笔交易只能出手自己的一张卡牌，希望得到的可以是卡牌，也可以是道具(二选一)，但数量不限。
+2. 可以根据提出交易方的卡牌名称搜索正在进行的交易，因为搜索频繁发生，所以不希望联表查询，为了进一步提高效率，希望能设置相应的索引。
+3. 一笔交易成交之后，得到的东西先放在玩家的礼物（gift）列表中，玩家确认之后，才能成为玩家的卡牌或者道具。
+4. 交易完成之后，需要在游戏公告中广播以下信息：user1用卡牌card1交易到了user2的n张card2(或者n个item)。
+
+[1] 请根据以上的要求设计数据库结构。
+[2] 请用伪代码实现完成交易过程的逻辑。
+
+user:
+- id
+- name
+
+item:
+- id
+- name
+
+card:
+- id
+- name
+
+user_item:
+- user_id
+- item_id
+- num
+
+user_card:
+- user_id
+- card_id
+- num
+
+trade:
+- id
+- user_id
+- card_id
+- card_name
+- object_type
+- object_id
+- object_num
+
+user_gift:
+- id
+- user_id
+- object_type
+- object_id
+- object_num
+
+growl:
+- id
+- message
+
+需要建立以下index，供参考：
+user_item: (user_id, item_id)
+user_card: (user_id, card_id)
+trade: (user_id, card_id)

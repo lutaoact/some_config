@@ -1,0 +1,14 @@
+BTreeSearch(node, key) {
+    if(node == null) return null;
+    foreach(node.key)
+    {
+        if(node.key[i] == key) return node.data[i];
+        if(node.key[i] > key) return BTreeSearch(point[i]->node, key);
+    }
+    return BTreeSearch(point[i+1]->node, key);
+}
+data = BTreeSearch(root, my_key);
+#对每一个node的key进行检查：
+#如果相等，则返回
+#如果大于要查找的key，则说明可能在左边的子节点中，所以在左边的子节点中继续递归查找
+#如果前面都没找到，则查找最后一个指针所指向的子节点
