@@ -26,7 +26,8 @@ set showtabline=2
 set autoindent
 set cindent
 set clipboard=unnamed
-set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ \%=[Line]\ %l,%c\ %=\ %P
+" set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ \%=[Line]\ %l,%c\ %=\ %P
+set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ [%{&ff}]\ [%{&fenc}\ %{&bomb}]\ [%b\ %B]\ \%=[Line]\ %l,%c\ %=\ %P
 set whichwrap=b,s,<,>,[,],h,l "Allow move the cursor left/right to move to the previous/next line
 set list listchars=tab:>-,trail:_
 set foldmethod=marker
