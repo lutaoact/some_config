@@ -35,7 +35,7 @@ alias game='ssh game@119.15.139.4'
 alias ll="ls -alFG"
 export TERM=xterm
 export PATH=$PATH:~/bin
-export NODE_ENV=cn_local_01
+#export NODE_ENV=cn_local_01
 #export PERL5LIB="~/MgServer/pm:~/perl5"
 
 if [ -f ~/.git-completion.bash ]; then
@@ -44,3 +44,4 @@ fi
 export EDITOR=vim
 export HISTSIZE=10000
 export HISTCONTROL="ignoredups"
+ulimit -S -n 10032

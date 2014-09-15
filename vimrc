@@ -8,8 +8,8 @@ set enc=utf-8
 set fencs=utf-8,gb2312,euc-jp,shift-jis
 set noswapfile
 set laststatus=2
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set ruler
 set showcmd
 set showmatch
@@ -46,11 +46,9 @@ map <F3> :!node %<CR>
 map <F4> :!perl %<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
-imap <F5> <ESC>:tabp<CR>i
-imap <F6> <ESC>:tabn<CR>i
 map <F7> :!run %<CR>
 map <F8> <ESC>:!perl -c %<CR>
-map <F9> :!NODE_ENV=cn_mocha_01 mocha %<CR>
+map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 nmap gf <C-W>gf
 
