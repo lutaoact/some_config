@@ -29,6 +29,7 @@ alias ssh_mgsys="ssh -i kr_white.pem mgsys@54.250.141.112"
 alias ssh_beta="ssh -i kr_white.pem mgsys@54.249.19.134"
 alias ssh_beta2="ssh -i kr_white.pem mgsys@54.250.186.215"
 alias ssh_dev1="ssh -i kr_white.pem mgsys@54.249.18.115"
+alias ssh_ub="ssh ubuntu@119.254.108.248"
 alias cn_ope='ssh -i ~/cnsango_ope.pem mgsys@119.15.139.29'
 alias tw_ope='ssh -i ~/twsango_mgsys.pem mgsys@twsango_monitor'
 alias game='ssh game@119.15.139.4'

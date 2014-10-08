@@ -16,7 +16,8 @@ set showmatch
 set cmdheight=3
 " set cursorline
 set wildmenu
-autocmd InsertLeave * se cul 
+set wildignore+=*/node_modules/*,*.js,*.map,*.less,*.css,*/bower_components/* " for ctrlp.vim
+autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
 set expandtab
