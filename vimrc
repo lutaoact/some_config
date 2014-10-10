@@ -1,7 +1,7 @@
 "Configured By Lu Tao 2013-08-15
 syntax on
 set nocompatible
-let loaded_matchparen = 1 
+let loaded_matchparen = 1
 set encoding=utf-8
 set nu
 set enc=utf-8
@@ -16,7 +16,7 @@ set showmatch
 set cmdheight=3
 " set cursorline
 set wildmenu
-set wildignore+=*/node_modules/*,*.js,*.map,*.less,*.css,*/bower_components/* " for ctrlp.vim
+set wildignore+=*/node_modules/*,*/budweiser/*.js,*.map,*.less,*.css,*/bower_components/* " for ctrlp.vim
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
