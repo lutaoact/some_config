@@ -32,8 +32,10 @@ alias ssh_dev1="ssh -i kr_white.pem mgsys@54.249.18.115"
 alias ssh_ub="ssh ubuntu@119.254.108.248"
 alias cn_ope='ssh -i ~/cnsango_ope.pem mgsys@119.15.139.29'
 alias tw_ope='ssh -i ~/twsango_mgsys.pem mgsys@twsango_monitor'
+alias mongogo='mongo budweiser-dev'
 alias game='ssh game@119.15.139.4'
 alias ll="ls -alFG"
+alias grep='grep --color=auto'
 export TERM=xterm
 export PATH=$PATH:~/bin
 #export NODE_ENV=cn_local_01
