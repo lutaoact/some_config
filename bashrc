@@ -25,15 +25,9 @@ if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ]; then
     PROMPT_COMMAND="update_terminal_cwd; $PROMPT_COMMAND"
 fi
 								    
-alias ssh_mgsys="ssh -i kr_white.pem mgsys@54.250.141.112"
-alias ssh_beta="ssh -i kr_white.pem mgsys@54.249.19.134"
-alias ssh_beta2="ssh -i kr_white.pem mgsys@54.250.186.215"
-alias ssh_dev1="ssh -i kr_white.pem mgsys@54.249.18.115"
 alias ssh_ub="ssh ubuntu@119.254.108.248"
-alias cn_ope='ssh -i ~/cnsango_ope.pem mgsys@119.15.139.29'
-alias tw_ope='ssh -i ~/twsango_mgsys.pem mgsys@twsango_monitor'
+alias sshh="ssh ubuntu@119.254.110.62"
 alias mongogo='mongo budweiser-dev'
-alias game='ssh game@119.15.139.4'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
 alias ls='ls -G'
