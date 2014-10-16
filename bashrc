@@ -36,6 +36,7 @@ alias mongogo='mongo budweiser-dev'
 alias game='ssh game@119.15.139.4'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
+alias ls='ls -G'
 export TERM=xterm
 export PATH=$PATH:~/bin
 #export NODE_ENV=cn_local_01
