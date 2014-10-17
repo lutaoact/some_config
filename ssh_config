@@ -10,7 +10,12 @@ Host ub
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
 
-Host h
+Host t
   Hostname 119.254.110.62
   User ubuntu
+  IdentityFile ~/.ssh/id_rsa
+
+Host ou
+  Hostname 192.168.1.119
+  User zhenkunou
   IdentityFile ~/.ssh/id_rsa
