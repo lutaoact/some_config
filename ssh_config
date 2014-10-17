@@ -4,3 +4,13 @@ Host github.com
     Hostname github.com
     User git
     IdentityFile ~/.ssh/id_rsa
+
+Host ub
+  Hostname 119.254.108.248
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa
+
+Host h
+  Hostname 119.254.110.62
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa
