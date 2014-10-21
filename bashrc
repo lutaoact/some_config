@@ -43,3 +43,6 @@ export EDITOR=vim
 export HISTSIZE=10000
 export HISTCONTROL="ignoredups"
 ulimit -S -n 10032
+
+export NVM_NODEJS_ORG_MIRROR='http://dist.u.qiniudn.com'
+source $(brew --prefix nvm)/nvm.sh
