@@ -16,7 +16,7 @@ set showmatch
 set cmdheight=3
 " set cursorline
 set wildmenu
-set wildignore+=*/budweiser/client/*,*/node_modules/*,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/* " for ctrlp.vim
+set wildignore+=*/budweiser/client/*,*/node_modules/*,*/budweiser/server/test/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/* " for ctrlp.vim
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
