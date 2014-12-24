@@ -28,11 +28,13 @@ fi
 alias ssh_ub="ssh ubuntu@119.254.108.248"
 alias sshh="ssh ubuntu@119.254.110.62"
 alias mongogo='mongo budweiser-dev'
+alias mongom='mongo maui-dev'
+alias lsport='lsof -i -P | grep -i listen'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
 alias ls='ls -G'
 export TERM=xterm
-export PATH=$PATH:~/bin
+export PATH=~/AndroidSDK/platform-tools:~/AndroidSDK/tools:$PATH:~/bin
 #export NODE_ENV=cn_local_01
 #export PERL5LIB="~/MgServer/pm:~/perl5"
 
