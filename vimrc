@@ -14,9 +14,9 @@ set ruler
 set showcmd
 set showmatch
 set cmdheight=3
-" set cursorline
+set cursorline
 set wildmenu
-set wildignore+=*/budweiser/client/*,*/node_modules/*,*/budweiser/server/test/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/* " for ctrlp.vim
+set wildignore+=*/maui/server/utils/*.js,*/maui/server/common/*.js,*/maui/client/*,*/maui/node_modules/*,*/budweiser/client/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*/leo/platforms/*,*/leo/plugins/*,*/leo/node_modules/gulp*,*.scss,*/leo/node_modules/bower*,*/leo/www/js/* " for ctrlp.vim
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
@@ -93,6 +93,7 @@ iab fff <C-R>=expand("%:t:r")<CR>
 " 
 " filetype plugin indent on     " required!
 au BufRead,BufNewFile *.ejs set filetype=html
+au BufRead,BufNewFile *.jade set filetype=html
 au BufRead,BufNewFile *.cgi set filetype=perl
 au BufRead,BufNewFile *.gyp set filetype=js
 " au BufEnter /private/tmp/crontab.* setl backupcopy=yes
