@@ -34,3 +34,4 @@
 	logOutputEncoding = utf-8
 [alias]
 	ss = status
+	diffs = diff --staged
