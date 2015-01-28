@@ -15,12 +15,27 @@ Host p
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
 
+Host cn
+  Hostname www.cloud3edu.cn
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa
+
 Host ou
   Hostname 192.168.1.119
   User zhenkunou
   IdentityFile ~/.ssh/id_rsa
 
 Host aws
-  Hostname 54.169.171.157
+  Hostname 54.169.119.123
   User ubuntu
   IdentityFile ~/.ssh/first_aws.pem
+
+Host yun
+  Hostname 121.201.7.57
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa
+
+Host yunr
+  Hostname 121.201.7.57
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa
