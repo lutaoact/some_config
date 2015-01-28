@@ -8,7 +8,7 @@ function git_branch {
   echo "("${ref#refs/heads/}")";
 }
 
-PS1='\h:\W \u\[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
+PS1='\h:\u \w \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
 # Tell the terminal about the working directory at each prompt.
