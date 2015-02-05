@@ -11,14 +11,6 @@
 	autocrlf = false
 	quotepath = false
 	whitespace = cr-at-eol
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[branch "sg/develop"]
-	rebase = false
 [credential]
 	helper = osxkeychain
 [diff]
@@ -35,3 +27,4 @@
 [alias]
 	ss = status
 	ds = diff --staged
+	d = diff
