@@ -10,7 +10,7 @@
 	editor = vim
 	autocrlf = false
 	quotepath = false
-	whitespace = cr-at-eol
+#	whitespace = cr-at-eol
 [credential]
 	helper = osxkeychain
 [diff]
@@ -28,3 +28,5 @@
 	ss = status
 	ds = diff --staged
 	d = diff
+	au = add -u
+	cam = commit -a -m
