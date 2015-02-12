@@ -5,13 +5,13 @@ Host github.com
     User git
     IdentityFile ~/.ssh/id_rsa
 
-Host ub
-  Hostname 119.254.108.180
+Host p
+  Hostname 119.254.108.120
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
 
-Host p
-  Hostname 119.254.108.120
+Host ma
+  Hostname 119.254.100.30
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
 
@@ -37,5 +37,5 @@ Host yun
 
 Host yunr
   Hostname 121.201.7.57
-  User ubuntu
+  User root
   IdentityFile ~/.ssh/id_rsa
