@@ -16,7 +16,7 @@ set showmatch
 set cmdheight=3
 set cursorline
 set wildmenu
-set wildignore+=*/maui/server/utils/*.js,*/maui/server/common/*.js,*/maui/client/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*/leo/platforms/*,*/leo/plugins/*,*/leo/node_modules/gulp*,*.scss,*/leo/node_modules/bower*,*/leo/www/js/* " for ctrlp.vim
+set wildignore+=*/maui/server/utils/*.js,*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/wechatY/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
@@ -59,25 +59,6 @@ vmap <Tab> >gv
 vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:t:r")<CR>
-
-" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" plugin on GitHub repo
-Plugin 'mileszs/ack.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 
 au BufRead,BufNewFile *.ejs set filetype=html
