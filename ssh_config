@@ -10,8 +10,8 @@ Host p
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
 
-Host ma
-  Hostname 119.254.100.30
+Host m
+  Hostname 119.254.100.36
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
 
