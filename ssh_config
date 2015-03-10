@@ -40,3 +40,8 @@ Host yunr
   Hostname 121.201.7.57
   User root
   IdentityFile ~/.ssh/id_rsa
+
+Host mje
+  Hostname 117.121.25.35
+  User root
+  IdentityFile ~/.ssh/kp-hcstqtf6

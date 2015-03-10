@@ -61,6 +61,9 @@ vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:t:r")<CR>
 
+autocmd FileType java set sw=4
+autocmd FileType java set ts=4
+autocmd FileType java set sts=4
 
 au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.jade set filetype=html
