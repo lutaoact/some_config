@@ -31,6 +31,11 @@ Host aws
   IdentityFile ~/.ssh/first_aws.pem
 #  ProxyCommand /usr/bin/nc -x 127.0.0.1:1080 %h %p
 
+Host awsr
+  Hostname 54.169.119.123
+  User root
+  IdentityFile ~/.ssh/first_aws.pem
+
 Host yun
   Hostname 121.201.7.57
   User ubuntu
