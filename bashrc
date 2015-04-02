@@ -33,6 +33,7 @@ alias lsport='lsof -i -P | grep -i listen'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
 alias ls='ls -G'
+alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 export TERM=xterm
 export PATH=~/AndroidSDK/platform-tools:~/AndroidSDK/tools:$PATH:~/bin
 #export NODE_ENV=cn_local_01
