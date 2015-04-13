@@ -34,10 +34,14 @@ alias ll="ls -alFG"
 alias grep='grep --color=auto'
 alias ls='ls -G'
 alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
+alias validate_srt="perl ~/gale/scripts/validate_srt.pl"
+alias load_kp_for_de="coffee scripts/load_key_point_json_to_db.coffee de"
+alias load_kp_for_nceone="coffee scripts/load_key_point_json_to_db.coffee nceone"
+alias load_srt_for_de="coffee scripts/load_srt_json_to_db.coffee de"
+alias load_srt_for_nceone="coffee scripts/load_srt_json_to_db.coffee nceone"
+
 export TERM=xterm
-export PATH=~/AndroidSDK/platform-tools:~/AndroidSDK/tools:$PATH:~/bin
-#export NODE_ENV=cn_local_01
-#export PERL5LIB="~/MgServer/pm:~/perl5"
+export PATH=/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin
 
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
