@@ -33,12 +33,24 @@ alias lsport='lsof -i -P | grep -i listen'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
 alias ls='ls -G'
+alias npm='npm --verbose'
 alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
+
+#全局可用
 alias validate_srt="perl ~/gale/scripts/validate_srt.pl"
+alias srt2utf8="sh ~/gale/scripts/srt2utf8.sh"
+alias scpyun="sh ~/gale/scripts/scpyun.sh"
+alias add_space_suffix="perl ~/gale/scripts/add_space_suffix.pl"
+
+#到gale目录去执行
 alias load_kp_for_de="coffee scripts/load_key_point_json_to_db.coffee de"
 alias load_kp_for_nceone="coffee scripts/load_key_point_json_to_db.coffee nceone"
 alias load_srt_for_de="coffee scripts/load_srt_json_to_db.coffee de"
 alias load_srt_for_nceone="coffee scripts/load_srt_json_to_db.coffee nceone"
+alias convert_srt_for_de="perl scripts/convert_srt_to_json.pl de"
+alias convert_srt_for_nceone="perl scripts/convert_srt_to_json.pl nceone"
+alias output_base_for_de="coffee scripts/output_key_points_base.coffee de"
+alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceone"
 
 export TERM=xterm
 export PATH=/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin
