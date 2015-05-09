@@ -47,6 +47,9 @@ alias load_kp_for_de="coffee scripts/load_key_point_json_to_db.coffee de"
 alias load_kp_for_nceone="coffee scripts/load_key_point_json_to_db.coffee nceone"
 alias load_srt_for_de="coffee scripts/load_srt_json_to_db.coffee de"
 alias load_srt_for_nceone="coffee scripts/load_srt_json_to_db.coffee nceone"
+
+alias load_lesson_list="sh scripts/load_lesson_list_json_to_db.sh"
+
 alias convert_srt_for_de="perl scripts/convert_srt_to_json.pl de"
 alias convert_srt_for_nceone="perl scripts/convert_srt_to_json.pl nceone"
 alias convert_kp_for_de="perl scripts/convert_key_point_txt_to_json.pl de"
