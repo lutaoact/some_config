@@ -49,8 +49,11 @@ alias load_srt_for_de="coffee scripts/load_srt_json_to_db.coffee de"
 alias load_srt_for_nceone="coffee scripts/load_srt_json_to_db.coffee nceone"
 alias convert_srt_for_de="perl scripts/convert_srt_to_json.pl de"
 alias convert_srt_for_nceone="perl scripts/convert_srt_to_json.pl nceone"
+alias convert_kp_for_de="perl scripts/convert_key_point_txt_to_json.pl de"
+alias convert_kp_for_nceone="perl scripts/convert_key_point_txt_to_json.pl nceone"
 alias output_base_for_de="coffee scripts/output_key_points_base.coffee de"
 alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceone"
+alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
 export PATH=/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin
