@@ -93,9 +93,9 @@
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>517 178 742 373 0 0 1920 1057 </string>
+	<string>673 223 742 373 0 0 1920 1057 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>9 549 924 485 0 0 1920 1057 </string>
+	<string>529 340 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>185 315 585 451 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -1002,7 +1002,7 @@
 			<key>Blur</key>
 			<false/>
 			<key>Blur Radius</key>
-			<real>2</real>
+			<real>2.0826945304870605</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1372,7 +1372,7 @@
 			<key>Name</key>
 			<string>iterm-pro</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>CourierNewPSMT 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
