@@ -50,3 +50,8 @@ Host mje
   Hostname 117.121.25.35
   User root
   IdentityFile ~/.ssh/kp-hcstqtf6
+
+Host dd
+  Hostname testapi.dudumeijia.com
+  User root
+  IdentityFile ~/.ssh/TT_DuDu_MBP
