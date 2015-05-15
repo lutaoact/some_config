@@ -14,7 +14,7 @@ set ruler
 set showcmd
 set showmatch
 set cmdheight=3
-set cursorline
+" set cursorline
 set wildmenu
 set wildignore+=*/maui/server/utils/*.js,*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/wechatY/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 autocmd InsertLeave * se cul
@@ -69,4 +69,5 @@ au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.jade set filetype=html
 au BufRead,BufNewFile *.cgi set filetype=perl
 au BufRead,BufNewFile *.gyp set filetype=js
+autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
