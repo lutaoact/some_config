@@ -29,6 +29,7 @@ alias ssh_ub="ssh ubuntu@119.254.108.248"
 alias sshh="ssh ubuntu@119.254.110.62"
 alias mongogo='mongo budweiser-dev'
 alias mongom='mongo maui-dev'
+alias mongodev='mongo development'
 alias lsport='lsof -i -P | grep -i listen'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
@@ -59,7 +60,8 @@ alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceon
 alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
-export PATH=/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
@@ -69,5 +71,12 @@ export HISTSIZE=10000
 export HISTCONTROL="ignoredups"
 ulimit -S -n 10032
 
-export NVM_NODEJS_ORG_MIRROR='http://dist.u.qiniudn.com'
+#export NVM_NODEJS_ORG_MIRROR='http://dist.u.qiniudn.com'
+export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+#nvm use 0.10.38
+
+
+# DuDu
+alias gffp="git flow feature publish"
+alias gotest="ssh test@192.168.3.64"
