@@ -15,8 +15,9 @@ set showcmd
 set showmatch
 set cmdheight=3
 " set cursorline
+set nocursorline
 set wildmenu
-set wildignore+=*/maui/server/utils/*.js,*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/wechatY/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
+set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
@@ -49,7 +50,7 @@ map <F4> :!perl %<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
 map <F7> :!run %<CR>
-map <F8> <ESC>:!perl -c %<CR>
+map <F8> <ESC>:!mocha %<CR>
 map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 nmap gf <C-W>gf
