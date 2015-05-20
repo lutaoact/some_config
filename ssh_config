@@ -5,21 +5,6 @@ Host github.com
     User git
     IdentityFile ~/.ssh/id_rsa
 
-Host p
-  Hostname 119.254.108.120
-  User ubuntu
-  IdentityFile ~/.ssh/id_rsa
-
-Host m
-  Hostname 119.254.100.36
-  User ubuntu
-  IdentityFile ~/.ssh/id_rsa
-
-Host cn
-  Hostname www.cloud3edu.cn
-  User ubuntu
-  IdentityFile ~/.ssh/id_rsa
-
 Host ou
   Hostname 192.168.1.119
   User zhenkunou
