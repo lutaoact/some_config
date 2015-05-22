@@ -45,6 +45,9 @@ export TERM=xterm
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+export PERL_HASH_SEED=0x00
+export PERL_PERTURB_KEYS=0
+
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
@@ -62,3 +65,4 @@ source $(brew --prefix nvm)/nvm.sh
 # DuDu
 alias gffp="git flow feature publish"
 alias gotest="ssh test@192.168.3.64"
+alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
