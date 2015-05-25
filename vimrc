@@ -50,7 +50,7 @@ map <F4> :!perl %<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
 map <F7> :!run %<CR>
-map <F8> <ESC>:!mocha %<CR>
+map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
 map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 nmap gf <C-W>gf
