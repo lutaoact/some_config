@@ -54,6 +54,7 @@ map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
 map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 nmap gf <C-W>gf
+nmap * *N
 
 nmap <Tab> v>
 nmap <S-Tab> v<
