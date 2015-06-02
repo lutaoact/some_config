@@ -66,3 +66,5 @@ source $(brew --prefix nvm)/nvm.sh
 alias gffp="git flow feature publish"
 alias gotest="ssh test@192.168.3.64"
 alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
+alias eld='el $(git d --name-only)'
+alias elds='el $(git ds --name-only)'
