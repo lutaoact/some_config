@@ -4,6 +4,8 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "googleadservices.com",
+  "vimeocdn.com",
   "wikipedia.org",
   "fastly.net",
   "amazonaws.com",
