@@ -54,7 +54,7 @@ map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
 map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 nmap gf <C-W>gf
-nmap * *N
+nnoremap * *N
 " visual模式下，用*搜索选中的文本，并高亮
 vnoremap * y:let @/=@"<CR>nN
 
