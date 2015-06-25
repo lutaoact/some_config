@@ -16,7 +16,7 @@ alias lsport='lsof -i -P | grep -i listen'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
 alias ls='ls -G'
-alias npm='npm --verbose'
+alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
 alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 
 #全局可用
