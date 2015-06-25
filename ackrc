@@ -1,1 +1,3 @@
 --ignore-directory=out
+--ignore-directory=apidoc
+--ignore-directory=test
