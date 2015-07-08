@@ -7,11 +7,6 @@ function git_branch {
 
 PS1='\h:\u \w \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
 
-alias ssh_ub="ssh ubuntu@119.254.108.248"
-alias sshh="ssh ubuntu@119.254.110.62"
-alias mongogo='mongo budweiser-dev'
-alias mongom='mongo maui-dev'
-alias mongodev='mongo development'
 alias lsport='lsof -i -P | grep -i listen'
 alias ll="ls -alFG"
 alias grep='grep --color=auto'
@@ -42,7 +37,7 @@ alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceon
 alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH:~/bin"
+export PATH="~/bin:/usr/local/opt/coreutils/libexec/gnubin:/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export PERL_HASH_SEED=0x00
@@ -61,8 +56,8 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 # nvm alias default 0.10
 
-
 # DuDu
+alias sshdd='ssh -t dd tmux a'
 alias gffp="git flow feature publish"
 alias gotest="ssh test@192.168.3.64"
 alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
