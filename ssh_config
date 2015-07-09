@@ -40,3 +40,9 @@ Host dd
   Hostname testapi.dudumeijia.com
   User root
   IdentityFile ~/.ssh/TT_DuDu_MBP
+
+Host tunnel
+  HostName testapi.dudumeijia.com
+  User root
+  IdentityFile ~/.ssh/TT_DuDu_MBP
+  LocalForward 54320 127.0.0.1:5432

@@ -58,6 +58,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 # DuDu
 alias sshdd='ssh -t dd tmux a'
+alias gotunnel='ssh -f -N tunnel'
 alias gffp="git flow feature publish"
 alias gotest="ssh test@192.168.3.64"
 alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
