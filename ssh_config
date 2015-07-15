@@ -11,15 +11,10 @@ Host ou
   IdentityFile ~/.ssh/id_rsa
 
 Host aws
-  Hostname 54.169.119.123
+  Hostname 52.69.198.217
   User ubuntu
-  IdentityFile ~/.ssh/first_aws.pem
+  IdentityFile ~/.ssh/UBUNTU_AWS.pem
 #  ProxyCommand /usr/bin/nc -x 127.0.0.1:1080 %h %p
-
-Host awsr
-  Hostname 54.169.119.123
-  User root
-  IdentityFile ~/.ssh/first_aws.pem
 
 Host yun
   Hostname 121.201.7.57
@@ -46,3 +41,8 @@ Host tunnel
   User root
   IdentityFile ~/.ssh/TT_DuDu_MBP
   LocalForward 54320 127.0.0.1:5432
+
+Host cent
+  Hostname 192.168.100.117
+  User lutao
+  IdentityFile ~/.ssh/TT_DuDu_MBP
