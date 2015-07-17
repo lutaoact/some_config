@@ -4,6 +4,22 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "ubuntuforums.org",
+  "debian.org",
+  "softpanorama.org",
+  "www.gnu.org",
+  "api.grokthedocs.com",
+  "media.readthedocs.org",
+  "googleapis.com",
+  "aws.amazon.com",
+  "coursera.org",
+  "bizographics.com",
+  "mongodb.org",
+  "faq-book.com",
+  "ibm.com",
+  "zemanta.com",
+  "strongloop.com",
+  "cons.org",
   "cloudfront.net",
   "timourrashed.com",
   "sequelizejs.com",
