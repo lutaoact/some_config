@@ -4,6 +4,14 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "wiki.archlinux.org",
+  "mail.google.com",
+  "utorrent.com",
+  "collector.githubapp.com",
+  "ftp.gnu.org",
+  "www.study-area.org",
+  "awsstatic.com",
+  "rsync.samba.org",
   "ubuntuforums.org",
   "debian.org",
   "softpanorama.org",
