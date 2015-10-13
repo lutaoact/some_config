@@ -8,9 +8,12 @@ function git_branch {
 PS1='\h:\u \w \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
 
 alias lsport='lsof -i -P | grep -i listen'
-alias ll="ls -alFG"
+alias redis-cli='redis-cli --raw' #让redis-cli正常显示中文
+#alias ls='ls -G' #for BSD ls
+alias ls='ls --color=auto' #for GNU ls
+#alias ll="ls -alFG" #for BSD ls
+alias ll="ls -alF" #for GNU ls
 alias grep='grep --color=auto'
-alias ls='ls -G'
 alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
 alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 
@@ -57,7 +60,9 @@ source $(brew --prefix nvm)/nvm.sh
 # nvm alias default 0.10
 
 # DuDu
+alias init_mac_dev="sh ~/script/init_mac_dev.sh"
 alias sshdd='ssh -t dd tmux a'
+alias sshshan='ssh -t shan tmux a'
 alias gotunnel='ssh -f -N tunnel'
 alias gffp="git flow feature publish"
 alias gotest="ssh test@192.168.3.64"
