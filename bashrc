@@ -56,7 +56,8 @@ ulimit -S -n 10032
 
 #export NVM_NODEJS_ORG_MIRROR='http://dist.u.qiniudn.com'
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm # install nvm by curl
+# source $(brew --prefix nvm)/nvm.sh # install nvm by brew
 # nvm alias default 0.10
 
 # DuDu
