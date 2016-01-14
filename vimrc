@@ -18,8 +18,9 @@ set cmdheight=3
 set nocursorline
 set wildmenu
 " set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
+" ctrlp的忽略文件列表定义\v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\/node_modules$',
+  \ 'dir':  '\v\/(node_modules|bower)',
   \ }
 autocmd InsertLeave * se cul
 set incsearch
