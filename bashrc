@@ -14,7 +14,6 @@ alias ls='ls --color=auto' #for GNU ls
 #alias ll="ls -alFG" #for BSD ls
 alias ll="ls -alF" #for GNU ls
 alias grep='grep --color=auto'
-alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
 alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 
 #全局可用
@@ -57,6 +56,7 @@ ulimit -S -n 10032
 #export NVM_NODEJS_ORG_MIRROR='http://dist.u.qiniudn.com'
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm # install nvm by curl
+alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
 # source $(brew --prefix nvm)/nvm.sh # install nvm by brew
 # nvm alias default 0.10
 
@@ -70,3 +70,6 @@ alias gotest="ssh test@192.168.3.64"
 alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
 alias eld='el $(git d --name-only)'
 alias elds='el $(git ds --name-only)'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
