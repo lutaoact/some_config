@@ -4,6 +4,18 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "tomcat.apache.org",
+  "ift.tt",
+  "herokuapp.com",
+  "www.html5rocks.com",
+  "university.mongodb.com",
+  "chromium.org",
+  "registry-1.docker.io",
+  "cdn-registry-1.docker.io",
+  "docker.io",
+  "index.docker.io",
+  "mx.tumblr.com",
+  "googlesyndication.com",
   "disqus.com",
   "wiki.archlinux.org",
   "mail.google.com",
