@@ -1,0 +1,28 @@
+1. 安装Shadowsocks代理软件
+   Finder中前往，连接服务器，服务器地址smb://192.168.1.7，软件路径为/swap/lut/ShadowsocksX-2.6.3.dmg，同一目录下，还有几个png图片，是用来指导安装流程的。
+   安装完成后，利用软件提供的功能将配置信息导入，具体操作如下：
+   打开0.png，让图片显示在最前面，不要被其它窗口遮挡，然后根据1.png的指导，扫描二维码，软件会自动识别屏幕上的二维码，录入信息。
+   然后打开2.png，根据指导，更新过滤列表，需要等一会，如果返回updated，表示更新成功。
+   输入google.com，看是否翻墙成功，如果不成功，则根据3.png指导，关闭软件，几秒之后，再重新打开，然后在执行一次更新过滤列表操作。
+   备注：我们的翻墙服务器是放在加拿大。
+2. 安装brew软件包管理器，相关网址http://brew.sh/
+   执行以下命令：
+   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   如果安装成功，尝试执行brew install wget，以后会用到的一个软件
+3. 安装polipo，将上面的socks代理转为http代理：
+   brew install polipo
+   polipo socksParentProxy=localhost:1080
+   备注：polipo还有其它用法，有兴趣的自己去研究吧，当然你也可以把配置写入一个文件，通过-c参数来制定，比如polipo -c configFile
+4. 安装nvm：
+   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+   在~/.bash_profile文件中，写入这几行：
+     export NVM_DIR=~/.nvm
+     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm # install nvm by curl
+     alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
+   然后执行. ~/.bash_profile
+5. 安装node
+   nvm install 4.2
+   nvm alias default 4.2
+   npm install -g npm grunt-cli bower
+6. 在代码库中执行npm install和bower install安装依赖
+7. grunt serve
