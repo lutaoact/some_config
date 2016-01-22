@@ -24,5 +24,6 @@
    nvm install 4.2
    nvm alias default 4.2
    npm install -g npm grunt-cli bower
+   sudo gem install sass
 6. 在代码库中执行npm install和bower install安装依赖
 7. grunt serve
