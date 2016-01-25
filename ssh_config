@@ -5,36 +5,26 @@ Host github.com
     User git
     IdentityFile ~/.ssh/id_rsa
 
-Host ou
-  Hostname 192.168.1.119
-  User zhenkunou
-  IdentityFile ~/.ssh/id_rsa
-
 Host aws
   Hostname 52.69.198.217
   User ubuntu
   IdentityFile ~/.ssh/UBUNTU_AWS.pem
 #  ProxyCommand /usr/bin/nc -x 127.0.0.1:1080 %h %p
 
-Host yun
-  Hostname 121.201.7.57
+Host wind
+  Hostname 121.201.28.101
   User ubuntu
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/TT_DuDu_MBP
 
 Host yunr
-  Hostname 121.201.7.57
-  User root
-  IdentityFile ~/.ssh/id_rsa
-
-Host mje
-  Hostname 117.121.25.35
-  User root
-  IdentityFile ~/.ssh/kp-hcstqtf6
-
-Host dd
-  Hostname testapi.dudumeijia.com
+  Hostname 121.201.28.101
   User root
   IdentityFile ~/.ssh/TT_DuDu_MBP
+
+Host ddx
+  Hostname 121.43.120.207
+  User root
+  IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host tunnel
   HostName testapi.dudumeijia.com
