@@ -1,5 +1,10 @@
 ServerAliveInterval 60
 
+Host bitbucket.org
+    Hostname bitbucket.org
+    User git
+    IdentityFile ~/.ssh/bitbucket.pem
+
 Host github.com
     Hostname github.com
     User git
@@ -24,6 +29,16 @@ Host yunr
 Host ddx
   Hostname 121.43.120.207
   User root
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host deploy
+  Hostname 192.168.1.13
+  User hacker
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host node
+  Hostname 192.168.1.30
+  User hacker
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host tunnel
