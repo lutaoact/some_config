@@ -39,7 +39,7 @@ alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceon
 alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
-export PATH="~/bin:/usr/local/opt/coreutils/libexec/gnubin:/Users/lutao/android-sdk-macosx/platform-tools:/Users/lutao/android-sdk-macosx/tools:$PATH"
+export PATH="/usr/local/openresty/nginx/sbin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export PERL_HASH_SEED=0x00
@@ -73,3 +73,9 @@ alias elds='el $(git ds --name-only)'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NODE_ENV=development
+
+# DDX
+alias mongo29='mongo 192.168.1.29/angularexpress-dev'
+alias redis29='redis-cli -h 192.168.1.29'
