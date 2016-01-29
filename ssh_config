@@ -41,6 +41,11 @@ Host node
   User hacker
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
+Host 29
+  Hostname 192.168.1.29
+  User hacker
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
 Host tunnel
   HostName testapi.dudumeijia.com
   User root
