@@ -4,6 +4,9 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "rim.i.lithium.com",
+  "ftp.astron.com",
+  "www.teatro-real.com",
   "tomcat.apache.org",
   "ift.tt",
   "herokuapp.com",

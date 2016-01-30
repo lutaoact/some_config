@@ -19,11 +19,16 @@ Host aws
 Host wind
   Hostname 121.201.28.101
   User ubuntu
-  IdentityFile ~/.ssh/TT_DuDu_MBP
+  IdentityFile ~/.ssh/Wind_qingcloud.pem
 
-Host yunr
+Host windr
   Hostname 121.201.28.101
   User root
+  IdentityFile ~/.ssh/Wind_qingcloud.pem
+
+Host wtt
+  Hostname 121.201.28.101
+  User wtt
   IdentityFile ~/.ssh/TT_DuDu_MBP
 
 Host ddx

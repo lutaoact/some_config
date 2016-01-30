@@ -63,10 +63,7 @@ alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
 # DuDu
 alias init_mac_dev="sh ~/script/init_mac_dev.sh"
 alias sshdd='ssh -t dd tmux a'
-alias sshshan='ssh -t shan tmux a'
 alias gotunnel='ssh -f -N tunnel'
-alias gffp="git flow feature publish"
-alias gotest="ssh test@192.168.3.64"
 alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
 alias eld='el $(git d --name-only)'
 alias elds='el $(git ds --name-only)'
