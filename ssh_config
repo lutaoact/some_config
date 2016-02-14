@@ -41,7 +41,7 @@ Host deploy
   User hacker
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
-Host node
+Host 30
   Hostname 192.168.1.30
   User hacker
   IdentityFile ~/.ssh/TT_DDX_MacMini
@@ -49,6 +49,21 @@ Host node
 Host 29
   Hostname 192.168.1.29
   User hacker
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host noder
+  Hostname 120.55.92.192
+  User root
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host node
+  Hostname 120.55.92.192
+  User centos
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host mongo
+  Hostname 120.55.87.138
+  User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host tunnel
