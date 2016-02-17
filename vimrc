@@ -48,7 +48,7 @@ hi Comment ctermfg=6
 "Mappings
 "===============
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
-map <F2> :call JsBeautify()<CR>
+map <F2> :%!python -m json.tool<CR>
 map <F3> :!node %<CR>
 map <F4> :!perl %<CR>
 map <F5> :tabp<CR>
