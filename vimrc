@@ -77,6 +77,7 @@ au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.jade set filetype=html
 au BufRead,BufNewFile *.cgi set filetype=perl
 au BufRead,BufNewFile *.gyp set filetype=js
+au BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd BufRead,BufNewFile **eslintrc** setfiletype json
