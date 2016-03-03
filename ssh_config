@@ -8,7 +8,7 @@ Host bitbucket.org
 Host github.com
     Hostname github.com
     User git
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/github.pem
 
 Host aws
   Hostname 52.69.198.217
