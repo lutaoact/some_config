@@ -26,9 +26,13 @@
 	commitEncoding = utf-8
 	logOutputEncoding = utf-8
 [alias]
+	s = status
 	ss = status
 	ds = diff --staged
 	d = diff
+	co = checkout
+	ps = push
+	pl = pull
 	au = add -u
 	cam = commit -a -m
 [http]
