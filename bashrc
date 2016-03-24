@@ -1,4 +1,5 @@
 [ -r /etc/bashrc ] && . /etc/bashrc
+[ -r ~/script/lutaoact_functions.sh ] && . ~/script/lutaoact_functions.sh
 
 function git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
@@ -55,7 +56,7 @@ ulimit -S -n 10032
 
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm # install nvm by curl
-alias npm='npm --verbose --registry=https://registry.npm.taobao.org'
+alias npm='npm --registry=https://registry.npm.taobao.org'
 
 # DuDu
 alias init_mac_dev="sh ~/script/init_mac_dev.sh"
