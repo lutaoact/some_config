@@ -4,6 +4,15 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "stackoverflow.com",
+  "images-na.ssl-images-amazon.com",
+  "a.fsdn.com",
+  "sourceforge.net",
+  "cycling74.com",
+  "ssl.p.jwpcdn.com",
+  "cdn.inspectlet.com",
+  "www.livecoding.tv",
+  "codex.codecademy.com",
   "rim.i.lithium.com",
   "ftp.astron.com",
   "www.teatro-real.com",
