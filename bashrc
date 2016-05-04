@@ -74,3 +74,13 @@ export NODE_ENV=development
 # DDX
 alias mongo29='mongo 192.168.1.29/angularexpress-dev'
 alias redis29='redis-cli -h 192.168.1.29'
+
+# Linux-101-Hacks
+export CDPATH=~:/data
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+shopt -s cdspell
