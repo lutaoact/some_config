@@ -68,6 +68,7 @@ vmap <Tab> >gv
 vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:t:r")<CR>
+iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
 
 autocmd FileType java set sw=4
 autocmd FileType java set ts=4
@@ -81,4 +82,5 @@ au BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd BufRead,BufNewFile **eslintrc** setfiletype json
+au BufNewFile,BufRead,BufWrite *.markdown set filetype=txt
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
