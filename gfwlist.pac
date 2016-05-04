@@ -4,6 +4,7 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "static.anquan.org",
   "stackoverflow.com",
   "images-na.ssl-images-amazon.com",
   "a.fsdn.com",
