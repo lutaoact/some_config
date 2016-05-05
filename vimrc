@@ -67,7 +67,7 @@ nmap <S-Tab> v<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
-iab fff <C-R>=expand("%:t:r")<CR>
+iab fff <C-R>=expand("%:t:r")<CR><ESC>
 iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
 
 autocmd FileType java set sw=4
