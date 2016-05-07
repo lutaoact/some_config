@@ -76,3 +76,14 @@ Host devr
   Hostname 120.26.65.228
   User root
   IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host home
+  Hostname 192.168.1.121
+  User lutao
+  IdentityFile ~/.ssh/self.pem
+
+Host ehome
+  Hostname 42.196.120.215
+  User centos
+  Port 62222
+  IdentityFile ~/.ssh/self.pem
