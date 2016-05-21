@@ -62,10 +62,10 @@ Host mongo
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host tunnel
-  HostName testapi.dudumeijia.com
-  User root
-  IdentityFile ~/.ssh/TT_DuDu_MBP
-  LocalForward 54320 127.0.0.1:5432
+  HostName 121.201.28.101
+  User ubuntu
+  IdentityFile ~/.ssh/Wind_qingcloud.pem
+  LocalForward 27018 127.0.0.1:27018
 
 Host dev
   Hostname 120.26.65.228
