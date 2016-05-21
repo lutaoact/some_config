@@ -6,7 +6,7 @@ function git_branch {
   echo "("${ref#refs/heads/}")";
 }
 
-PS1='\h:\u \w \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
+PS1='\h:\u \W \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
 
 alias lsport='lsof -i -P | grep -i listen'
 alias redis-cli='redis-cli --raw' #让redis-cli正常显示中文
@@ -61,7 +61,6 @@ alias npm='npm --registry=https://registry.npm.taobao.org'
 # DuDu
 alias init_mac_dev="sh ~/script/init_mac_dev.sh"
 alias sshdd='ssh -t dd tmux a'
-alias gotunnel='ssh -f -N tunnel'
 alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
 alias eld='el $(git d --name-only)'
 alias elds='el $(git ds --name-only)'
@@ -71,8 +70,11 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NODE_ENV=development
 
+# Wind
+alias mongow='mongo 127.0.0.1:27018/wind-cms-dev'
+alias gotunnel='ssh -f -N tunnel'
+
 # DDX
-alias mongo29='mongo 192.168.1.29/angularexpress-dev'
 alias redis29='redis-cli -h 192.168.1.29'
 
 # Linux-101-Hacks
