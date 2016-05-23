@@ -21,6 +21,11 @@ Host wind
   User ubuntu
   IdentityFile ~/.ssh/Wind_qingcloud.pem
 
+Host wind2
+  Hostname 121.201.14.43
+  User ubuntu
+  IdentityFile ~/.ssh/Wind_qingcloud.pem
+
 Host windr
   Hostname 121.201.28.101
   User root
@@ -78,7 +83,7 @@ Host devr
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host home
-  Hostname 192.168.1.121
+  Hostname 192.168.100.108
   User lutao
   IdentityFile ~/.ssh/self.pem
 
