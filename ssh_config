@@ -21,7 +21,7 @@ Host wind
   User ubuntu
   IdentityFile ~/.ssh/Wind_qingcloud.pem
 
-Host wind2
+Host media
   Hostname 121.201.14.43
   User ubuntu
   IdentityFile ~/.ssh/Wind_qingcloud.pem
