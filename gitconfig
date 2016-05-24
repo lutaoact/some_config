@@ -27,6 +27,7 @@
 	logOutputEncoding = utf-8
 [alias]
 	s = status
+	br = branch
 	ss = status
 	ds = diff --staged
 	d = diff
