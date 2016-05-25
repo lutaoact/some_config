@@ -72,7 +72,6 @@ export NODE_ENV=development
 
 # Wind
 alias mongow='mongo 127.0.0.1:27018/wind-cms-dev'
-alias gotunnel='ssh -f -N tunnel'
 
 # DDX
 alias redis29='redis-cli -h 192.168.1.29'
