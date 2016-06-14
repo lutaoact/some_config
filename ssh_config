@@ -92,3 +92,23 @@ Host ehome
   User centos
   Port 62222
   IdentityFile ~/.ssh/self.pem
+
+Host pay
+  Hostname 112.124.114.35
+  User centos
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host bak
+  Hostname 124.42.118.148
+  User centos
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host local
+  Hostname 127.0.0.1
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+#ssh -i ~/.ssh/TT_DDX_MacMini centos@120.26.142.146
+Host zabbix
+  Hostname 120.26.142.146
+  User centos
+  IdentityFile ~/.ssh/TT_DDX_MacMini
