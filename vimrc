@@ -69,6 +69,9 @@ vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:t:r")<CR><ESC>
 iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
+iab rr (req, res, next) => {<CR>}<ESC><<<<
+iab rg router.get('', );<ESC>F'h
+iab rp router.post('', );<ESC>F'h
 
 autocmd FileType java set sw=4
 autocmd FileType java set ts=4
