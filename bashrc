@@ -74,7 +74,11 @@ export NODE_ENV=development
 alias mongow='mongo 127.0.0.1:27018/wind-cms-dev'
 
 # DDX
+alias qstart='qingcloud iaas start-instances --instances i-1duawxmn'
+alias qstop='qingcloud iaas stop-instances --instances i-1duawxmn'
+alias qrestart='qingcloud iaas restart-instances --instances i-1duawxmn'
 alias redis29='redis-cli -h 192.168.1.29'
+alias deploy='sh ~/script/deploy.sh'
 
 # Linux-101-Hacks
 export CDPATH=~:/data
