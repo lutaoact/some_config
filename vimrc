@@ -4,6 +4,7 @@ set nocompatible
 let loaded_matchparen = 1
 set encoding=utf-8
 set nu
+set relativenumber
 set enc=utf-8
 set fencs=utf-8,gb2312,euc-jp,shift-jis
 set noswapfile
@@ -61,6 +62,8 @@ nmap gf <C-W>gf
 nnoremap * *N
 " visual模式下，用*搜索选中的文本，并高亮
 vnoremap * y:let @/=@"<CR>nN
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 nmap <Tab> v>
 nmap <S-Tab> v<
@@ -69,9 +72,14 @@ vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:t:r")<CR><ESC>
 iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
+iab cc (err) => {<CR>}<ESC><<<<
 iab rr (req, res, next) => {<CR>}<ESC><<<<
 iab rg router.get('', );<ESC>F'h
 iab rp router.post('', );<ESC>F'h
+iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
+iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
+iab bb (_cb) => {<CR>},<ESC>
+iab fn function(doc) {<CR>}<ESC><<<<
 
 autocmd FileType java set sw=4
 autocmd FileType java set ts=4
