@@ -72,14 +72,14 @@ vmap <S-Tab> <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:t:r")<CR><ESC>
 iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
-iab cc (err) => {<CR>}<ESC><<<<
-iab rr (req, res, next) => {<CR>}<ESC><<<<
+iab (e (err) => {<CR>}<ESC><<<<
+iab (r (req, res, next) => {<CR>}<ESC><<<<
 iab rg router.get('', );<ESC>F'h
 iab rp router.post('', );<ESC>F'h
 iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
 iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
-iab bb (_cb) => {<CR>},<ESC>
-iab fn function(doc) {<CR>}<ESC><<<<
+iab (_ (_cb) => {<CR>},<ESC>
+iab func function(doc) {<CR>}<ESC><<<<
 
 autocmd FileType java set sw=4
 autocmd FileType java set ts=4
