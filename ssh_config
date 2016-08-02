@@ -37,8 +37,8 @@ Host wtt
   IdentityFile ~/.ssh/TT_DuDu_MBP
 
 Host ddx
-  Hostname 121.43.120.207
-  User root
+  Hostname 120.26.65.228
+  User ddx
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host 29
