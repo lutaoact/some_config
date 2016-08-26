@@ -77,6 +77,13 @@ Host dev
   User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
+Host remotenode
+  Hostname 120.55.92.192
+  User centos
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+  RemoteForward 2222 127.0.0.1:22
+  ExitOnForwardFailure yes
+
 Host devr
   Hostname 120.26.65.228
   User root
