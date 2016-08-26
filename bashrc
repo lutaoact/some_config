@@ -18,26 +18,26 @@ alias grep='grep --color=auto'
 alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 
 #全局可用
-alias validate_srt="perl ~/gale/scripts/validate_srt.pl"
-alias srt2utf8="sh ~/gale/scripts/srt2utf8.sh"
-alias scpyun="sh ~/gale/scripts/scpyun.sh"
-alias add_space_suffix="perl ~/gale/scripts/add_space_suffix.pl"
-
-#到gale目录去执行
-alias load_kp_for_de="coffee scripts/load_key_point_json_to_db.coffee de"
-alias load_kp_for_nceone="coffee scripts/load_key_point_json_to_db.coffee nceone"
-alias load_srt_for_de="coffee scripts/load_srt_json_to_db.coffee de"
-alias load_srt_for_nceone="coffee scripts/load_srt_json_to_db.coffee nceone"
-
-alias load_lesson_list="sh scripts/load_lesson_list_json_to_db.sh"
-
-alias convert_srt_for_de="perl scripts/convert_srt_to_json.pl de"
-alias convert_srt_for_nceone="perl scripts/convert_srt_to_json.pl nceone"
-alias convert_kp_for_de="perl scripts/convert_key_point_txt_to_json.pl de"
-alias convert_kp_for_nceone="perl scripts/convert_key_point_txt_to_json.pl nceone"
-alias output_base_for_de="coffee scripts/output_key_points_base.coffee de"
-alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceone"
-alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
+#alias validate_srt="perl ~/gale/scripts/validate_srt.pl"
+#alias srt2utf8="sh ~/gale/scripts/srt2utf8.sh"
+#alias scpyun="sh ~/gale/scripts/scpyun.sh"
+#alias add_space_suffix="perl ~/gale/scripts/add_space_suffix.pl"
+#
+##到gale目录去执行
+#alias load_kp_for_de="coffee scripts/load_key_point_json_to_db.coffee de"
+#alias load_kp_for_nceone="coffee scripts/load_key_point_json_to_db.coffee nceone"
+#alias load_srt_for_de="coffee scripts/load_srt_json_to_db.coffee de"
+#alias load_srt_for_nceone="coffee scripts/load_srt_json_to_db.coffee nceone"
+#
+#alias load_lesson_list="sh scripts/load_lesson_list_json_to_db.sh"
+#
+#alias convert_srt_for_de="perl scripts/convert_srt_to_json.pl de"
+#alias convert_srt_for_nceone="perl scripts/convert_srt_to_json.pl nceone"
+#alias convert_kp_for_de="perl scripts/convert_key_point_txt_to_json.pl de"
+#alias convert_kp_for_nceone="perl scripts/convert_key_point_txt_to_json.pl nceone"
+#alias output_base_for_de="coffee scripts/output_key_points_base.coffee de"
+#alias output_base_for_nceone="coffee scripts/output_key_points_base.coffee nceone"
+#alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
 export PATH="/usr/local/openresty/nginx/sbin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -77,8 +77,18 @@ alias mongow='mongo 127.0.0.1:27018/wind-cms-dev'
 alias qstart='qingcloud iaas start-instances --instances i-1duawxmn'
 alias qstop='qingcloud iaas stop-instances --instances i-1duawxmn'
 alias qrestart='qingcloud iaas restart-instances --instances i-1duawxmn'
-alias redis29='redis-cli -h 192.168.1.29'
 alias deploy='sh ~/script/deploy.sh'
+
+function autoconnect() {
+  while true
+  do
+    ssh -v -N "$1"
+    sleep 10
+  done
+}
+
+alias connectlocal='autoconnect localnode'
+alias connectremote='autoconnect remotenode'
 
 # Linux-101-Hacks
 export CDPATH=~:/data
