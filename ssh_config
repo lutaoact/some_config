@@ -119,3 +119,8 @@ Host zabbix
   Hostname 120.26.142.146
   User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host do
+  Hostname 188.166.212.1
+  User ubuntu
+  IdentityFile ~/.ssh/digitalocean.pem
