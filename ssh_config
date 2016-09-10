@@ -41,28 +41,20 @@ Host ddx
   User ddx
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
-Host 29
-  Hostname 192.168.1.29
-  User hacker
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host noder
-  Hostname 120.55.92.192
-  User root
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
 Host node
   Hostname 120.55.92.192
   User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
-Host node2
-  Hostname 121.41.45.77
+Host proxynode
+  Hostname 120.55.92.192
   User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
+  LocalForward 8388 188.166.212.1:8388
+  ExitOnForwardFailure yes
 
-Host mongo
-  Hostname 120.55.87.138
+Host node2
+  Hostname 121.41.45.77
   User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
@@ -84,22 +76,6 @@ Host remotenode
   RemoteForward 2222 127.0.0.1:22
   ExitOnForwardFailure yes
 
-Host devr
-  Hostname 120.26.65.228
-  User root
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host home
-  Hostname 192.168.100.108
-  User lutao
-  IdentityFile ~/.ssh/self.pem
-
-Host ehome
-  Hostname 42.196.120.215
-  User centos
-  Port 62222
-  IdentityFile ~/.ssh/self.pem
-
 Host pay
   Hostname 112.124.114.35
   User centos
@@ -108,10 +84,6 @@ Host pay
 Host bak
   Hostname 124.42.118.148
   User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host local
-  Hostname 127.0.0.1
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 #ssh -i ~/.ssh/TT_DDX_MacMini centos@120.26.142.146
