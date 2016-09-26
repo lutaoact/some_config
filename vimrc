@@ -80,8 +80,8 @@ iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
 iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
 iab (_ (_cb) => {<CR>},<ESC>kf)
 iab (d (doc) => {<CR>}<ESC>
-iab if if () {<CR>}<ESC>kf(
-iab iff if (err) return cb(err);<ESC>k
+iab ifc if (err) return cb(err);<ESC>k
+iab ifn if (err) return next(err);<ESC>k
 iab func function(doc) {<CR>}<ESC><<<<
 
 autocmd FileType java set sw=4
