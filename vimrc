@@ -45,6 +45,7 @@ set backspace=2
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
 hi Comment ctermfg=6
+" hi Search cterm=NONE ctermfg=grey ctermbg=blue
 "===============
 "Mappings
 "===============
