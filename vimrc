@@ -79,7 +79,7 @@ iab rg router.get('', );<ESC>F'h
 iab rp router.post('', );<ESC>F'h
 iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
 iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
-iab (_ (_cb) => {<CR>},<ESC>kf)
+iab (_ (_cb, ret) => {<CR>},<ESC>kf)
 iab (d (doc) => {<CR>}<ESC>
 iab ifc if (err) return cb(err);<ESC>k
 iab ifn if (err) return next(err);<ESC>k
