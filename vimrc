@@ -83,7 +83,6 @@ iab (_ (_cb, ret) => {<CR>},<ESC>kf)
 iab (d (doc) => {<CR>}<ESC>
 iab ifc if (err) return cb(err);<ESC>k
 iab ifn if (err) return next(err);<ESC>k
-iab func function(doc) {<CR>}<ESC><<<<
 
 autocmd FileType java set sw=4
 autocmd FileType java set ts=4
