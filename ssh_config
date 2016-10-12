@@ -53,7 +53,7 @@ Host proxynode
   LocalForward 8388 188.166.212.1:8388
   ExitOnForwardFailure yes
 
-Host node2
+Host gw
   Hostname 121.41.45.77
   User centos
   IdentityFile ~/.ssh/TT_DDX_MacMini
