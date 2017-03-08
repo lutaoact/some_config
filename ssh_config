@@ -44,19 +44,19 @@ Host ddx
 Host node
   Hostname 120.55.92.192
   User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
+  IdentityFile ~/.ssh/sogu.pem
 
 Host proxynode
   Hostname 120.55.92.192
-  User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-  LocalForward 8388 188.166.212.1:8388
+  User forward
+  IdentityFile ~/.ssh/forward.pem
+  LocalForward 18388 188.166.212.1:8388
   ExitOnForwardFailure yes
 
 Host gw
   Hostname 121.41.45.77
   User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
+  IdentityFile ~/.ssh/sogu.pem
 
 Host tunnel
   HostName 121.201.28.101
@@ -89,7 +89,12 @@ Host bak
 #ssh -i ~/.ssh/TT_DDX_MacMini centos@120.26.142.146
 Host zabbix
   Hostname 120.26.142.146
-  User centos
+  User root
+  IdentityFile ~/.ssh/TT_DDX_MacMini
+
+Host sogukj
+  Hostname 120.26.138.46
+  User root
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host do
