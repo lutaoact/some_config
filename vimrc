@@ -4,7 +4,7 @@ set nocompatible
 let loaded_matchparen = 1
 set encoding=utf-8
 set nu
-set relativenumber
+" set relativenumber
 set enc=utf-8
 set fencs=utf-8,gb2312,euc-jp,shift-jis
 set noswapfile
@@ -98,3 +98,5 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd BufRead,BufNewFile **eslintrc** setfiletype json
 au BufNewFile,BufRead,BufWrite *.markdown set filetype=txt
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
+
+autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf

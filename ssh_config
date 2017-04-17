@@ -58,6 +58,11 @@ Host gw
   User centos
   IdentityFile ~/.ssh/sogu.pem
 
+Host gw2
+  Hostname 120.26.231.220
+  User centos
+  IdentityFile ~/.ssh/sogu.pem
+
 Host tunnel
   HostName 121.201.28.101
   User ubuntu
