@@ -113,3 +113,5 @@ au BufNewFile,BufRead,BufWrite *.markdown set filetype=txt
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
 
 autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
+
+filetype plugin indent on " 让vim-go插件正常工作，打开文件类型探测功能，加载文件类型插件，使用文件类型的缩进方式
