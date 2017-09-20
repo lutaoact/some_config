@@ -1,5 +1,6 @@
 [ -r /etc/bashrc ] && . /etc/bashrc
 [ -r ~/script/lutaoact_functions.sh ] && . ~/script/lutaoact_functions.sh
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 function git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
@@ -8,14 +9,14 @@ function git_branch {
 
 PS1='\h:\u \W \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
 
-alias lsport='lsof -i -P | grep -i listen'
+#alias lsport='lsof -i -P | grep -i listen'
 alias redis-cli='redis-cli --raw' #让redis-cli正常显示中文
-#alias ls='ls -G' #for BSD ls
+##alias ls='ls -G' #for BSD ls
 alias ls='ls --color=auto' #for GNU ls
-#alias ll="ls -alFG" #for BSD ls
+##alias ll="ls -alFG" #for BSD ls
 alias ll="ls -alF" #for GNU ls
 alias grep='grep --color=auto'
-alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
+#alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 
 #全局可用
 #alias validate_srt="perl ~/gale/scripts/validate_srt.pl"
@@ -40,7 +41,7 @@ alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 #alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
-export PATH="/usr/local/openresty/nginx/sbin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export PERL_HASH_SEED=0x00
@@ -55,47 +56,53 @@ export HISTCONTROL="ignoredups"
 ulimit -S -n 10032
 
 export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm # install nvm by curl
-alias npm='npm --registry=https://registry.npm.taobao.org'
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm # install nvm by curl
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#alias npm='npm --registry=https://registry.npm.taobao.org'
 
 # DuDu
-alias init_mac_dev="sh ~/script/init_mac_dev.sh"
-alias sshdd='ssh -t dd tmux a'
-alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
-alias eld='el $(git d --name-only)'
-alias elds='el $(git ds --name-only)'
+#alias init_mac_dev="sh ~/script/init_mac_dev.sh"
+#alias sshdd='ssh -t dd tmux a'
+#alias sync_db="sh ~/script/sync_db_from_dd_test_server.sh"
+#alias eld='el $(git d --name-only)'
+#alias elds='el $(git ds --name-only)'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export NODE_ENV=development
+#export NODE_ENV=development
 
 # Wind
-alias mongow='mongo 127.0.0.1:27018/wind-cms-dev'
+#alias mongow='mongo 127.0.0.1:27018/wind-cms-dev'
 
 # DDX
-alias qstart='qingcloud iaas start-instances --instances i-1duawxmn'
-alias qstop='qingcloud iaas stop-instances --instances i-1duawxmn'
-alias qrestart='qingcloud iaas restart-instances --instances i-1duawxmn'
-alias deploy='sh ~/script/deploy.sh'
+#alias qstart='qingcloud iaas start-instances --instances i-1duawxmn'
+#alias qstop='qingcloud iaas stop-instances --instances i-1duawxmn'
+#alias qrestart='qingcloud iaas restart-instances --instances i-1duawxmn'
+#alias deploy='sh ~/script/deploy.sh'
 
-function autoconnect() {
-  while true
-  do
-    ssh -v -N "$1"
-    sleep 10
-  done
-}
+#function autoconnect() {
+#  while true
+#  do
+#    ssh -v -N "$1"
+#    sleep 10
+#  done
+#}
 
-alias connectlocal='autoconnect localnode'
-alias connectremote='autoconnect remotenode'
+#alias connectlocal='autoconnect localnode'
+#alias connectremote='autoconnect remotenode'
 
 # Linux-101-Hacks
-export CDPATH=~:/data
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
+# alias ..="cd .."
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+# alias .....="cd ../../../.."
+# alias ......="cd ../../../../.."
 
 shopt -s cdspell
+
+# QINIU
+export GPG_TTY=$(tty)
+export GOPATH=~/go
+export PATH="$GOPATH/bin:$PATH"

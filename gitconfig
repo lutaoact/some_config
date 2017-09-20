@@ -1,7 +1,7 @@
 [color]
 	ui = auto
 [user]
-	email = lutaoact@hotmail.com
+	email = lutao@qiniu.com
 	name = lutaoact
 [push]
 	default = current
@@ -11,6 +11,7 @@
 	autocrlf = false
 	quotepath = false
 	ignorecase = false
+	pager = less -x1,5
 #	whitespace = cr-at-eol
 [credential]
 	helper = osxkeychain
@@ -36,5 +37,3 @@
 	pl = pull
 	au = add -u
 	cam = commit -a -m
-[http]
-	proxy = 127.0.0.1:8123

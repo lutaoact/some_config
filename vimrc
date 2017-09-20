@@ -80,29 +80,31 @@ nmap <S-Tab> v<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" 获取文件名
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:p")<CR>
 
+" 用到的一些简写
 iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
-iab (e (err) => {<CR>}<ESC><<<<kf)h
-iab (r (req, res, next) => {<CR>}<ESC><<<<
-iab rg router.get('', );<ESC>F'h
-iab rp router.post('', );<ESC>F'h
-iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
-iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
-iab (_ (_cb, ret) => {<CR>},<ESC>kf)
-iab (d (doc) => {<CR>}<ESC>
-iab ifc if (err) return cb(err);<ESC>k
-iab ifn if (err) return next(err);<ESC>k
+" iab (e (err) => {<CR>}<ESC><<<<kf)h
+" iab (r (req, res, next) => {<CR>}<ESC><<<<
+" iab rg router.get('', );<ESC>F'h
+" iab rp router.post('', );<ESC>F'h
+" iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
+" iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
+" iab (_ (_cb, ret) => {<CR>},<ESC>kf)
+" iab (d (doc) => {<CR>}<ESC>
+" iab ifc if (err) return cb(err);<ESC>k
+" iab ifn if (err) return next(err);<ESC>k
 
-autocmd FileType java set sw=4
-autocmd FileType java set ts=4
-autocmd FileType java set sts=4
+" autocmd FileType java set sw=4
+" autocmd FileType java set ts=4
+" autocmd FileType java set sts=4
 
-au BufRead,BufNewFile *.ejs set filetype=html
-au BufRead,BufNewFile *.jade set filetype=html
-au BufRead,BufNewFile *.cgi set filetype=perl
-au BufRead,BufNewFile *.gyp set filetype=js
+" au BufRead,BufNewFile *.ejs set filetype=html
+" au BufRead,BufNewFile *.jade set filetype=html
+" au BufRead,BufNewFile *.cgi set filetype=perl
+" au BufRead,BufNewFile *.gyp set filetype=js
 au BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
