@@ -9,26 +9,26 @@ set enc=utf-8
 set fencs=utf-8,gb2312,euc-jp,shift-jis
 set noswapfile
 set laststatus=2
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set ruler
 set showcmd
 set showmatch
 set cmdheight=3
-" set cursorline
-set nocursorline
+set cursorline
+" set nocursorline
 set wildmenu
 " set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 " ctrlp的忽略文件列表定义\v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|bower|client|wind-cms\/public|wind-cms\/templates)',
+  \ 'dir':  '\v\/(node_modules)',
   \ }
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
-set expandtab
-set smarttab
-set smartindent
+" set expandtab
+" set smarttab
+" set smartindent
 set showtabline=2
 set autoindent
 set cindent
@@ -36,9 +36,9 @@ set clipboard=unnamed
 " set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ \%=[Line]\ %l,%c\ %=\ %P
 set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ [%{&ff}]\ [%{&fenc}\ %{&bomb}]\ [%b\ %B]\ \%=[Line]\ %l,%c\ %=\ %P
 set whichwrap=b,s,<,>,[,],h,l "Allow move the cursor left/right to move to the previous/next line
-set list listchars=tab:>-,trail:_
+" set list listchars=tab:>-,trail:_
 set foldmethod=marker
-" set path=~/BoxsterServer/app/**,~/BoxsterServer/lib/**,~/BoxsterServer/script/**
+set path=~/go/src
 set suffixesadd=.js
 set keywordprg=:help
 set backspace=2
@@ -52,7 +52,7 @@ hi Comment ctermfg=6
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 map <F2> :%!python -m json.tool<CR>
 map <F3> :!node %<CR>
-map <F4> :!perl %<CR>
+map <F4> :!go run %<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
 map <F7> :!sh %<CR>
@@ -66,12 +66,23 @@ vnoremap * y:let @/=@"<CR>nN
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+" 插入模式下，成对符号的自动匹配
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ` ``<left>
+
+" 使用<Tab>和<S-Tab>实现缩进
 nmap <Tab> v>
 nmap <S-Tab> v<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
+
 iab ffff <C-R>=expand("%:t")<CR>
-iab fff <C-R>=expand("%:t:r")<CR><ESC>
+iab fff <C-R>=expand("%:p")<CR>
+
 iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
 iab (e (err) => {<CR>}<ESC><<<<kf)h
 iab (r (req, res, next) => {<CR>}<ESC><<<<
