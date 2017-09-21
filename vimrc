@@ -19,16 +19,18 @@ set cursorline
 " set nocursorline
 set wildmenu
 " set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
+
 " ctrlp的忽略文件列表定义\v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules)',
+  \ 'dir':  '\v\/(node_modules|vendor)',
   \ }
+
 autocmd InsertLeave * se cul
 set incsearch
 set hlsearch
-" set expandtab
-" set smarttab
-" set smartindent
+set expandtab
+set smarttab
+set smartindent
 set showtabline=2
 set autoindent
 set cindent
@@ -36,7 +38,10 @@ set clipboard=unnamed
 " set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ \%=[Line]\ %l,%c\ %=\ %P
 set statusline=\ [File]\ %F%m%r%h\ %w\ \ %h\ [%{&ff}]\ [%{&fenc}\ %{&bomb}]\ [%b\ %B]\ \%=[Line]\ %l,%c\ %=\ %P
 set whichwrap=b,s,<,>,[,],h,l "Allow move the cursor left/right to move to the previous/next line
-" set list listchars=tab:>-,trail:_
+
+" 可视化显示tab和行尾的空格
+set list listchars=tab:>-,trail:_
+
 set foldmethod=marker
 set path=~/go/src
 set suffixesadd=.js
@@ -114,4 +119,17 @@ au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---
 
 autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
 
+" ********************* 以下为go语言相关配置 *********************
+
+" 不启用list模式，因为有fmt的存在，空白字符不需要可视化
+autocmd FileType go set nolist
+
+" tag用camelCase的方式显示，默认为snake_case
+let g:go_addtags_transform = "camelcase"
+
+" 在格式化的时候自动导入依赖包
+let g:go_fmt_command = "goimports"
+
 filetype plugin indent on " 让vim-go插件正常工作，打开文件类型探测功能，加载文件类型插件，使用文件类型的缩进方式
+
+" ********************* 以上为go语言相关配置 *********************
