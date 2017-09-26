@@ -1,9 +1,9 @@
-"Configured By Lu Tao 2013-08-15
+" Configured By Lu Tao 2013-08-15
 syntax on
 set nocompatible
 let loaded_matchparen = 1
 set encoding=utf-8
-set nu
+set number
 " set relativenumber
 set enc=utf-8
 set fencs=utf-8,gb2312,euc-jp,shift-jis
@@ -20,7 +20,7 @@ set cursorline
 set wildmenu
 " set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 
-" ctrlp的忽略文件列表定义\v是vim指令，用于打开very magic
+" ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v\/(node_modules|vendor)',
   \ }
@@ -43,7 +43,6 @@ set whichwrap=b,s,<,>,[,],h,l "Allow move the cursor left/right to move to the p
 set list listchars=tab:>-,trail:_
 
 set foldmethod=marker
-set path=~/go/src
 set suffixesadd=.js
 set keywordprg=:help
 set backspace=2
@@ -51,23 +50,27 @@ set backspace=2
 " match OverLength /\%81v.\+/
 hi Comment ctermfg=6
 " hi Search cterm=NONE ctermfg=grey ctermbg=blue
-"===============
-"Mappings
-"===============
+
+" Mappings
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 map <F2> :%!python -m json.tool<CR>
 map <F3> :!node %<CR>
 map <F4> :!go run %<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
-map <F7> :!sh %<CR>
-map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
-map <F9> :!coffee %<CR>
+" map <F7> :!sh %<CR>
+" map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
+" map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
+
+" 实现文件跳转，默认从path指定的路径开始查找
+set path=~/go/src
 nmap gf <C-W>gf
+
 nnoremap * *N
 " visual模式下，用*搜索选中的文本，并高亮
 vnoremap * y:let @/=@"<CR>nN
+
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
