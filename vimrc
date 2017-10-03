@@ -52,7 +52,6 @@ hi Comment ctermfg=6
 " hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 " Mappings
-nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 map <F2> :%!python -m json.tool<CR>
 map <F3> :!node %<CR>
 map <F4> :!go run %<CR>
@@ -82,11 +81,15 @@ inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
 
-" 使用<Tab>和<S-Tab>实现缩进
-nmap <Tab> v>
-nmap <S-Tab> v<
-vmap <Tab> >gv
-vmap <S-Tab> <gv
+" 选中上次操作过的文本片段
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+" 使用<Tab>和<S-Tab>实现缩进，由于<TAB>键是ultisnips的默认触发键，所以会产生冲突
+" 这里用 > 和 < 来替代
+nnoremap > v>
+nnoremap < v<
+vnoremap > >gv
+vnoremap < <gv
 
 " 获取文件名
 iab ffff <C-R>=expand("%:t")<CR>
