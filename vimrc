@@ -15,14 +15,14 @@ set ruler
 set showcmd
 set showmatch
 set cmdheight=3
-set cursorline
-" set nocursorline
+" set cursorline
+set nocursorline
 set wildmenu
 " set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|vendor)',
+  \ 'dir':  '\v\/(node_modules|vendor|_site)',
   \ }
 
 autocmd InsertLeave * se cul
@@ -80,6 +80,7 @@ inoremap { {}<left>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
+inoremap < <><left>
 
 " 选中上次操作过的文本片段
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
@@ -95,8 +96,8 @@ vnoremap < <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:p")<CR>
 
-" 用到的一些简写
-iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
+" 这些简写都没用了，应该转为snippet
+" iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
 " iab (e (err) => {<CR>}<ESC><<<<kf)h
 " iab (r (req, res, next) => {<CR>}<ESC><<<<
 " iab rg router.get('', );<ESC>F'h
@@ -120,7 +121,7 @@ au BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd BufRead,BufNewFile **eslintrc** setfiletype json
-au BufNewFile,BufRead,BufWrite *.markdown set filetype=txt
+" au BufNewFile,BufRead,BufWrite *.markdown set filetype=markdown
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
 
 autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
