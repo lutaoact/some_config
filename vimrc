@@ -22,7 +22,7 @@ set wildmenu
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|vendor|_site)',
+  \ 'dir':  '\v\/(node_modules|vendor|_site|portal|deployment)',
   \ }
 
 autocmd InsertLeave * se cul
@@ -57,7 +57,7 @@ map <F3> :!node %<CR>
 map <F4> :!go run %<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
-" map <F7> :!sh %<CR>
+map <F7> :!./%<CR>
 " map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
 " map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
@@ -80,7 +80,6 @@ inoremap { {}<left>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
-inoremap < <><left>
 
 " 选中上次操作过的文本片段
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
@@ -136,6 +135,20 @@ let g:go_addtags_transform = "camelcase"
 
 " 在格式化的时候自动导入依赖包
 let g:go_fmt_command = "goimports"
+
+" 控制打开alternate file的方式
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
+" let g:go_decls_includes = 'func,type'
+" let g:go_decls_includes = 'func'
+nmap <C-I> :GoDecls<CR>
+
+" 列出godef的调用栈
+nmap <C-L> :GoDefStack<CR>
 
 filetype plugin indent on " 让vim-go插件正常工作，打开文件类型探测功能，加载文件类型插件，使用文件类型的缩进方式
 
