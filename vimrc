@@ -136,11 +136,15 @@ let g:go_addtags_transform = "camelcase"
 " 在格式化的时候自动导入依赖包
 let g:go_fmt_command = "goimports"
 
-" 控制打开alternate file的方式
+" 控制打开alternate file的方式，在这里是指go的test文件
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" 执行GoDef时跳转到新tab或者垂直分割窗口，默认的gd命令是直接在当前窗口中打开
+au FileType go nmap dv <Plug>(go-def-vertical)
+au FileType go nmap dt <Plug>(go-def-tab)
 
 " 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
 " let g:go_decls_includes = 'func,type'
