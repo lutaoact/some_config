@@ -1,5 +1,45 @@
 ServerAliveInterval 60
 
+Host j
+    Hostname 10.8.0.1
+    User lutao
+    Port 18022
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+# ssh -p 18022 -i ~/.ssh/qiniu.mbp.pem lutao@10.8.0.1
+
+Host master-evm1
+    Hostname 183.2.220.227
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host p2evm1
+    Hostname 183.2.220.227
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+    LocalForward 27019 10.96.69.153:27017
+    ExitOnForwardFailure yes
+# ssh -N -L 27019:10.96.69.153:27017 master-evm1
+
+Host svr0
+    Hostname 45.76.163.62
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host svr1
+    Hostname 45.77.47.89
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host svr2
+    Hostname 45.77.47.223
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host gitlab.qiniu.io
+    Hostname gitlab.qiniu.io
+    User git
+    IdentityFile ~/.ssh/gitlab.qiniu.io.pem
+
 Host bitbucket.org
     Hostname bitbucket.org
     User git
