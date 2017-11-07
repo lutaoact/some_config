@@ -28,7 +28,7 @@
 	logOutputEncoding = utf-8
 [alias]
 	s = status
-	br = branch
+	br = branch -vv
 	ss = status
 	ds = diff --staged
 	d = diff
@@ -36,4 +36,5 @@
 	ps = push
 	pl = pull
 	au = add -u
-	cam = commit -a -m
+	cm = commit
+	cmm = commit --amend
