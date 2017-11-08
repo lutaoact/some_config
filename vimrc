@@ -22,7 +22,7 @@ set wildmenu
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|vendor|_site|portal|deployment)',
+  \ 'dir':  '\v\/(node_modules|vendor|_site|portal)',
   \ }
 
 autocmd InsertLeave * se cul
@@ -95,19 +95,6 @@ vnoremap < <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:p")<CR>
 
-" 这些简写都没用了，应该转为snippet
-" iab hl {% highlight sh %}<CR>{% endhighlight %}<ESC>
-" iab (e (err) => {<CR>}<ESC><<<<kf)h
-" iab (r (req, res, next) => {<CR>}<ESC><<<<
-" iab rg router.get('', );<ESC>F'h
-" iab rp router.post('', );<ESC>F'h
-" iab mm _u.mySeries({<CR>}, (err, ret) => {<CR>});<ESC><<<<k<<<<
-" iab mn _u.mySeries({<CR>}, cb);<ESC><<<<
-" iab (_ (_cb, ret) => {<CR>},<ESC>kf)
-" iab (d (doc) => {<CR>}<ESC>
-" iab ifc if (err) return cb(err);<ESC>k
-" iab ifn if (err) return next(err);<ESC>k
-
 " autocmd FileType java set sw=4
 " autocmd FileType java set ts=4
 " autocmd FileType java set sts=4
@@ -120,7 +107,6 @@ au BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd BufRead,BufNewFile **eslintrc** setfiletype json
-" au BufNewFile,BufRead,BufWrite *.markdown set filetype=markdown
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
 
 autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
@@ -137,10 +123,10 @@ let g:go_addtags_transform = "camelcase"
 let g:go_fmt_command = "goimports"
 
 " 控制打开alternate file的方式，在这里是指go的test文件
-autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+" autocmd Filetype go command! -bang E call go#alternate#Switch(<bang>0, 'edit')
+" autocmd Filetype go command! -bang S call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang V call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang T call go#alternate#Switch(<bang>0, 'tabe')
 
 " 执行GoDef时跳转到新tab或者垂直分割窗口，默认的gd命令是直接在当前窗口中打开
 au FileType go nmap dv <Plug>(go-def-vertical)
@@ -149,7 +135,8 @@ au FileType go nmap dt <Plug>(go-def-tab)
 " 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
 " let g:go_decls_includes = 'func,type'
 " let g:go_decls_includes = 'func'
-nmap <C-I> :GoDecls<CR>
+" nmap <C-I> :GoDecls<CR>
+" 在normal模式下，直接按tab就可以触发，所以没有必要再加上面这个nmap了
 
 " 列出godef的调用栈
 nmap <C-L> :GoDefStack<CR>
