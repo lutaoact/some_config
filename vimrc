@@ -135,8 +135,7 @@ au FileType go nmap dt <Plug>(go-def-tab)
 " 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
 " let g:go_decls_includes = 'func,type'
 " let g:go_decls_includes = 'func'
-" nmap <C-I> :GoDecls<CR>
-" 在normal模式下，直接按tab就可以触发，所以没有必要再加上面这个nmap了
+nmap <TAB> :GoDecls<CR>
 
 " 列出godef的调用栈
 nmap <C-L> :GoDefStack<CR>
