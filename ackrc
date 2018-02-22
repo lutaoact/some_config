@@ -1,3 +1,2 @@
---ignore-directory=out
---ignore-directory=logs
---ignore-directory=apidoc
+--ignore-directory=portal/frontend
+--ignore-file=is:repo_meta.json

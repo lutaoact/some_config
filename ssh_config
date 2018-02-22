@@ -1,22 +1,71 @@
 ServerAliveInterval 60
 
-Host j
-    Hostname 10.8.0.1
-    User lutao
-    Port 18022
-    IdentityFile ~/.ssh/qiniu.mbp.pem
+#Host j
+#    Hostname 10.8.0.1
+#    User lutao
+#    Port 18022
+#    IdentityFile ~/.ssh/qiniu.mbp.pem
 # ssh -p 18022 -i ~/.ssh/qiniu.mbp.pem lutao@10.8.0.1
+
+Host k
+    Hostname 106.14.221.230
+    User ubuntu
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+#ssh -i ~/.ssh/qiniu.mbp.pem lutao@106.14.221.230
+
+Host kaiqi
+    Hostname 106.14.221.230
+    User lutao
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host j
+    Hostname 10.88.0.1
+    User lutao
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host one
+    Hostname 182.92.240.223
+    User root
+    IdentityFile ~/.ssh/onetou.pem
+# ssh -i ~/.ssh/onetou.pem root@182.92.240.223
 
 Host master-evm1
     Hostname 183.2.220.227
     User root
     IdentityFile ~/.ssh/qiniu.mbp.pem
 
+Host newevm
+    Hostname 123.59.204.185
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+
+Host p2newevm
+    Hostname 123.59.204.185
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+    LocalForward 27020 10.96.27.69:27017
+    ExitOnForwardFailure yes
+
+Host p2svclt
+    Hostname 123.59.204.185
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+    LocalForward 35358 10.96.117.235:35358
+    ExitOnForwardFailure yes
+
 Host p2evm1
     Hostname 183.2.220.227
     User root
     IdentityFile ~/.ssh/qiniu.mbp.pem
-    LocalForward 27019 10.96.69.153:27017
+    LocalForward 27019 10.96.9.95:27017
+    ExitOnForwardFailure yes
+# ssh -N -L 27019:10.96.69.153:27017 master-evm1
+
+Host p2key
+    Hostname 183.2.220.227
+    User root
+    IdentityFile ~/.ssh/qiniu.mbp.pem
+    LocalForward 35357 10.96.94.60:35357
     ExitOnForwardFailure yes
 # ssh -N -L 27019:10.96.69.153:27017 master-evm1
 
@@ -35,6 +84,11 @@ Host svr2
     User root
     IdentityFile ~/.ssh/qiniu.mbp.pem
 
+Host gitee.com
+    Hostname gitee.com
+    User git
+    IdentityFile ~/.ssh/gitee.pem
+
 Host gitlab.qiniu.io
     Hostname gitlab.qiniu.io
     User git
@@ -49,6 +103,11 @@ Host github.com
     Hostname github.com
     User git
     IdentityFile ~/.ssh/github.pem
+
+Host github2.com
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/github-jteeuwen.pem
 
 Host aws
   Hostname 52.69.198.217
@@ -115,10 +174,10 @@ Host dev
   IdentityFile ~/.ssh/TT_DDX_MacMini
 
 Host remotenode
-  Hostname 120.55.92.192
-  User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-  RemoteForward 2222 127.0.0.1:22
+  Hostname 188.166.212.1
+  User ubuntu
+  IdentityFile ~/.ssh/digitalocean.pem
+  RemoteForward 11112 127.0.0.1:11111
   ExitOnForwardFailure yes
 
 Host pay
@@ -146,3 +205,15 @@ Host do
   Hostname 188.166.212.1
   User ubuntu
   IdentityFile ~/.ssh/digitalocean.pem
+
+Host s
+  Hostname 39.104.81.215
+  User ubuntu
+  IdentityFile ~/.ssh/siyuan.pem
+
+Host sr
+  Hostname 39.104.81.215
+  User ubuntu
+  IdentityFile ~/.ssh/siyuan.pem
+  RemoteForward 11111 127.0.0.1:11111
+  ExitOnForwardFailure yes

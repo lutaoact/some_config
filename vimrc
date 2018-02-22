@@ -22,7 +22,7 @@ set wildmenu
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|vendor|_site|portal)',
+  \ 'dir':  '\v\/(node_modules|vendor|_site|frontend)',
   \ }
 
 autocmd InsertLeave * se cul
@@ -95,9 +95,9 @@ vnoremap < <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:p")<CR>
 
-" autocmd FileType java set sw=4
-" autocmd FileType java set ts=4
-" autocmd FileType java set sts=4
+autocmd FileType javascript set sw=2
+autocmd FileType javascript set ts=2
+autocmd FileType javascript set sts=2
 
 " au BufRead,BufNewFile *.ejs set filetype=html
 " au BufRead,BufNewFile *.jade set filetype=html
