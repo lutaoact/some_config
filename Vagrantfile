@@ -29,10 +29,11 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  # config.vm.network "forwarded_port", guest: 11111, host: 11111, host_ip: "127.0.0.1"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "172.30.60.31"
+  config.vm.network "private_network", ip: "192.168.22.22"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -45,7 +46,8 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "/Users/lutao/go", "/home/vagrant/go", type: "nfs"
-  config.vm.synced_folder "/Users/lutao/aowa-server", "/home/vagrant/aowa-server", type: "nfs"
+  config.vm.synced_folder "/Users/lutao/long", "/home/vagrant/long", type: "nfs"
+  # config.vm.synced_folder "/Users/lutao/aowa-server", "/home/vagrant/aowa-server", type: "nfs"
   config.vm.synced_folder "/Users/lutao/some_config", "/home/vagrant/some_config", type: "nfs"
   config.vm.synced_folder "/data", "/data", type: "nfs"
 
