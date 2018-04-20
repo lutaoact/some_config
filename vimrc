@@ -9,8 +9,8 @@ set enc=utf-8
 set fencs=utf-8,gb2312,euc-jp,shift-jis
 set noswapfile
 set laststatus=2
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set ruler
 set showcmd
 set showmatch
@@ -95,9 +95,8 @@ vnoremap < <gv
 iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:p")<CR>
 
-autocmd FileType javascript set sw=2
-autocmd FileType javascript set ts=2
-autocmd FileType javascript set sts=2
+" setlocal可以指定只对某一类文件处理
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 sts=4
 
 " au BufRead,BufNewFile *.ejs set filetype=html
 " au BufRead,BufNewFile *.jade set filetype=html
