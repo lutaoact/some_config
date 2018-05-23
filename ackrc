@@ -1,2 +1,6 @@
---ignore-directory=portal/frontend
---ignore-file=is:repo_meta.json
+#--ignore-directory=portal/frontend
+#--ignore-file=is:repo_meta.json
+#--ignore-directory=node_modules
+#--ignore-directory=node_modules_linux
+#--ignore-directory=node_modules_mac
+#--ignore-directory=_site

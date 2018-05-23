@@ -42,7 +42,7 @@ set whichwrap=b,s,<,>,[,],h,l "Allow move the cursor left/right to move to the p
 " 可视化显示tab和行尾的空格
 set list listchars=tab:>-,trail:_
 
-set foldmethod=marker
+" set foldmethod=marker
 set suffixesadd=.js
 set keywordprg=:help
 set backspace=2
@@ -52,13 +52,13 @@ hi Comment ctermfg=6
 " hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 " Mappings
-map <F2> :%!python -m json.tool<CR>
-map <F3> :!node %<CR>
-map <F4> :!go run %<CR>
-map <F5> :tabp<CR>
-map <F6> :tabn<CR>
-map <F7> :!./%<CR>
-" map <F8> <ESC>:!NODE_ENV=test mocha %<CR>
+nmap <F2> :%!python -m json.tool<CR>
+nmap <F3> :!node %<CR>
+nmap <F4> :!go run %<CR>
+nmap <F5> :tabp<CR>
+nmap <F6> :tabn<CR>
+nmap <F7> :!./%<CR>
+nmap <F8> :!python %<CR>
 " map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 
@@ -107,6 +107,7 @@ autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd BufRead,BufNewFile **eslintrc** setfiletype json
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
+au BufRead,BufNewFile *nginx*.conf,*/nginx/conf.d/*,*/nginx.conf.d/* if &ft == '' | setfiletype nginx | endif
 
 autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
 

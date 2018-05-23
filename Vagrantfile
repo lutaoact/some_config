@@ -46,9 +46,10 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "/Users/lutao/go", "/home/vagrant/go", type: "nfs"
-  config.vm.synced_folder "/Users/lutao/long", "/home/vagrant/long", type: "nfs"
+  # config.vm.synced_folder "/Users/lutao/roboterra", "/home/vagrant/roboterra", type: "nfs"
   # config.vm.synced_folder "/Users/lutao/aowa-server", "/home/vagrant/aowa-server", type: "nfs"
   config.vm.synced_folder "/Users/lutao/some_config", "/home/vagrant/some_config", type: "nfs"
+  config.vm.synced_folder "/Users/lutao/Downloads", "/home/vagrant/Downloads", type: "nfs"
   config.vm.synced_folder "/data", "/data", type: "nfs"
 
   # Provider-specific configuration so you can fine-tune various

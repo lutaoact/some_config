@@ -1,21 +1,16 @@
 [ -r /etc/bashrc ] && . /etc/bashrc
 [ -r ~/script/lutaoact_functions.sh ] && . ~/script/lutaoact_functions.sh
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -r ~/private-config/bashrc ] && . ~/private-config/bashrc
 
 function git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
   echo "("${ref#refs/heads/}")";
 }
 
-PS1='\h:\u \W \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
+PS1='\[\033[1;31m\]\h\[\033[0m\]:\u \W \[\033[1;32m\]$(git_branch)\[\033[0m\]\$ '
 
 #alias lsport='lsof -i -P | grep -i listen'
-alias redis-cli='redis-cli --raw' #让redis-cli正常显示中文
-##alias ls='ls -G' #for BSD ls
-alias ls='ls --color=auto' #for GNU ls
-##alias ll="ls -alFG" #for BSD ls
-alias ll="ls -alF" #for GNU ls
-alias grep='grep --color=auto'
 #alias proxy='/Users/lutao/sshuttle/sshuttle -r aws 0/0 -vv'
 
 #全局可用
@@ -41,7 +36,7 @@ alias grep='grep --color=auto'
 #alias convert_lesson_list="perl scripts/convert_lesson_list_to_json.pl"
 
 export TERM=xterm
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$HOME/bin:/data/backup/google-cloud-sdk/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export PERL_HASH_SEED=0x00
@@ -106,3 +101,17 @@ shopt -s cdspell
 export GPG_TTY=$(tty)
 export GOPATH=~/go
 export PATH="$GOPATH/bin:$PATH"
+#export KUBECONFIG="~/private-config/k8s-config.yml"
+export KUBECONFIG="~/.kube/config"
+
+# yifei的三台服务器
+alias sshsvr0="ssh root@svr0"
+alias sshsvr1="ssh root@svr1"
+alias sshsvr2="ssh root@svr2"
+
+# evm服务器
+alias gogo="ssh newevm"
+alias kconf="gcloud container clusters get-credentials cluster-1 --zone us-central1-a --project api-project-244631180063"
+
+export KUBECONFIG=/Users/lutao/me/newevm_k8s_admin.conf
+alias k='kubectl -n kube-system'

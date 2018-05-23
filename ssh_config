@@ -206,6 +206,13 @@ Host do
   User ubuntu
   IdentityFile ~/.ssh/digitalocean.pem
 
+Host dorn2
+  Hostname 188.166.212.1
+  User ubuntu
+  IdentityFile ~/.ssh/digitalocean.pem
+  RemoteForward 11113 127.0.0.1:22222
+  ExitOnForwardFailure yes
+
 Host s
   Hostname 39.104.81.215
   User ubuntu
@@ -217,3 +224,14 @@ Host sr
   IdentityFile ~/.ssh/siyuan.pem
   RemoteForward 11111 127.0.0.1:11111
   ExitOnForwardFailure yes
+
+Host r
+  Hostname 47.93.44.146
+  User root
+  IdentityFile ~/.ssh/qiniu.mbp.pem
+
+#办公室台式机
+Host o
+  Hostname 100.100.56.162
+  User lutao
+  IdentityFile ~/.ssh/qiniu.mbp.pem

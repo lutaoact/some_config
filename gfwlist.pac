@@ -4,6 +4,15 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "docs.docker.com",
+  "huxiucdn.com",
+  "trac.ffmpeg.org",
+  "netdna-ssl.com",
+  "googleusercontent.com",
+  "logx.optimizely.com",
+  "www.cloudflare.com",
+  "openx.net",
+  "reuters.com",
   "clients5.google.com",
   "discuss.leetcode.com",
   "linux.thai.net",
