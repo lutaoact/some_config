@@ -1,13 +1,13 @@
 [color]
 	ui = auto
 [user]
-	email = lutao@qiniu.com
+	email = i@lutao.me
 	name = lutaoact
 [push]
 	default = current
 [core]
 	excludesfile = /Users/lutao/.gitignore_global
-	editor = vim
+	editor = /usr/bin/vi
 	autocrlf = false
 	quotepath = false
 	ignorecase = false

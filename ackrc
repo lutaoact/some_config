@@ -1,5 +1,8 @@
-#--ignore-directory=portal/frontend
-#--ignore-file=is:repo_meta.json
+--ignore-directory=vendor
+--ignore-directory=portal/frontend
+--ignore-file=is:repo_meta.json
+--ignore-directory=make/release
+--ignore-dir=portal/dist
 #--ignore-directory=node_modules
 #--ignore-directory=node_modules_linux
 #--ignore-directory=node_modules_mac

@@ -7,52 +7,6 @@ ServerAliveInterval 60
 #    IdentityFile ~/.ssh/qiniu.mbp.pem
 # ssh -p 18022 -i ~/.ssh/qiniu.mbp.pem lutao@10.8.0.1
 
-Host k
-    Hostname 106.14.221.230
-    User ubuntu
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-#ssh -i ~/.ssh/qiniu.mbp.pem lutao@106.14.221.230
-
-Host kaiqi
-    Hostname 106.14.221.230
-    User lutao
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
-Host j
-    Hostname 10.88.0.1
-    User lutao
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
-Host one
-    Hostname 182.92.240.223
-    User root
-    IdentityFile ~/.ssh/onetou.pem
-# ssh -i ~/.ssh/onetou.pem root@182.92.240.223
-
-Host master-evm1
-    Hostname 183.2.220.227
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
-Host newevm
-    Hostname 123.59.204.185
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
-Host p2newevm
-    Hostname 123.59.204.185
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-    LocalForward 27020 10.96.27.69:27017
-    ExitOnForwardFailure yes
-
-Host p2svclt
-    Hostname 123.59.204.185
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-    LocalForward 35358 10.96.117.235:35358
-    ExitOnForwardFailure yes
-
 Host p2evm1
     Hostname 183.2.220.227
     User root
@@ -69,30 +23,15 @@ Host p2key
     ExitOnForwardFailure yes
 # ssh -N -L 27019:10.96.69.153:27017 master-evm1
 
-Host svr0
-    Hostname 45.76.163.62
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
-Host svr1
-    Hostname 45.77.47.89
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
-Host svr2
-    Hostname 45.77.47.223
-    User root
-    IdentityFile ~/.ssh/qiniu.mbp.pem
-
 Host gitee.com
     Hostname gitee.com
     User git
     IdentityFile ~/.ssh/gitee.pem
 
-Host gitlab.qiniu.io
-    Hostname gitlab.qiniu.io
+Host git.llsapp.com
+    Hostname git.llsapp.com
     User git
-    IdentityFile ~/.ssh/gitlab.qiniu.io.pem
+    IdentityFile ~/.ssh/lls.pem
 
 Host bitbucket.org
     Hostname bitbucket.org
@@ -115,36 +54,6 @@ Host aws
   IdentityFile ~/.ssh/UBUNTU_AWS.pem
 #  ProxyCommand /usr/bin/nc -x 127.0.0.1:1080 %h %p
 
-Host wind
-  Hostname 121.201.28.101
-  User ubuntu
-  IdentityFile ~/.ssh/Wind_qingcloud.pem
-
-Host media
-  Hostname 121.201.14.43
-  User ubuntu
-  IdentityFile ~/.ssh/Wind_qingcloud.pem
-
-Host windr
-  Hostname 121.201.28.101
-  User root
-  IdentityFile ~/.ssh/Wind_qingcloud.pem
-
-Host wtt
-  Hostname 121.201.28.101
-  User wtt
-  IdentityFile ~/.ssh/TT_DuDu_MBP
-
-Host ddx
-  Hostname 120.26.65.228
-  User ddx
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host node
-  Hostname 120.55.92.192
-  User centos
-  IdentityFile ~/.ssh/sogu.pem
-
 Host proxynode
   Hostname 120.55.92.192
   User forward
@@ -152,57 +61,14 @@ Host proxynode
   LocalForward 18388 188.166.212.1:8388
   ExitOnForwardFailure yes
 
-Host gw
-  Hostname 121.41.45.77
-  User centos
-  IdentityFile ~/.ssh/sogu.pem
-
-Host gw2
-  Hostname 120.26.231.220
-  User centos
-  IdentityFile ~/.ssh/sogu.pem
-
 Host tunnel
   HostName 121.201.28.101
   User ubuntu
   IdentityFile ~/.ssh/Wind_qingcloud.pem
   LocalForward 27018 127.0.0.1:27018
 
-Host dev
-  Hostname 120.26.65.228
-  User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host remotenode
-  Hostname 188.166.212.1
-  User ubuntu
-  IdentityFile ~/.ssh/digitalocean.pem
-  RemoteForward 11112 127.0.0.1:11111
-  ExitOnForwardFailure yes
-
-Host pay
-  Hostname 112.124.114.35
-  User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host bak
-  Hostname 124.42.118.148
-  User centos
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-#ssh -i ~/.ssh/TT_DDX_MacMini centos@120.26.142.146
-Host zabbix
-  Hostname 120.26.142.146
-  User root
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
-Host sogukj
-  Hostname 120.26.138.46
-  User root
-  IdentityFile ~/.ssh/TT_DDX_MacMini
-
 Host do
-  Hostname 188.166.212.1
+  Hostname 206.189.150.50
   User ubuntu
   IdentityFile ~/.ssh/digitalocean.pem
 
@@ -224,14 +90,3 @@ Host sr
   IdentityFile ~/.ssh/siyuan.pem
   RemoteForward 11111 127.0.0.1:11111
   ExitOnForwardFailure yes
-
-Host r
-  Hostname 47.93.44.146
-  User root
-  IdentityFile ~/.ssh/qiniu.mbp.pem
-
-#办公室台式机
-Host o
-  Hostname 100.100.56.162
-  User lutao
-  IdentityFile ~/.ssh/qiniu.mbp.pem

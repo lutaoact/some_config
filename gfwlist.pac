@@ -4,6 +4,17 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "tunnelblick.net",
+  "quora.com",
+  "www.google.com",
+  "tiqcdn.com",
+  "certificatechain.io",
+  "xinhuanet.com",
+  "199it.com",
+  "ryerh.com",
+  "techietown.info",
+  "veithen.github.io",
+  "dtracebook.com",
   "docs.docker.com",
   "huxiucdn.com",
   "trac.ffmpeg.org",
@@ -14,7 +25,7 @@ var rules = [
   "openx.net",
   "reuters.com",
   "clients5.google.com",
-  "discuss.leetcode.com",
+  "leetcode.com",
   "linux.thai.net",
   "firewalld.org",
   "ftp.pbone.net",

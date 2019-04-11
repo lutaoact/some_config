@@ -17,12 +17,13 @@ set showmatch
 set cmdheight=3
 " set cursorline
 set nocursorline
+" set cursorcolumn
 set wildmenu
 " set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|vendor|_site|frontend)',
+  \ 'dir':  '\v\/(node_modules|vendor|_site|frontend|qce/models|qce/client)',
   \ }
 
 autocmd InsertLeave * se cul
@@ -42,7 +43,6 @@ set whichwrap=b,s,<,>,[,],h,l "Allow move the cursor left/right to move to the p
 " 可视化显示tab和行尾的空格
 set list listchars=tab:>-,trail:_
 
-" set foldmethod=marker
 set suffixesadd=.js
 set keywordprg=:help
 set backspace=2
@@ -58,12 +58,12 @@ nmap <F4> :!go run %<CR>
 nmap <F5> :tabp<CR>
 nmap <F6> :tabn<CR>
 nmap <F7> :!./%<CR>
-nmap <F8> :!python %<CR>
+nmap <F8> :!python3 %<CR>
 " map <F9> :!coffee %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 
 " 实现文件跳转，默认从path指定的路径开始查找
-set path=~/go/src
+set path=~/go/src,~/qiniu
 nmap gf <C-W>gf
 
 nnoremap * *N
@@ -96,7 +96,8 @@ iab ffff <C-R>=expand("%:t")<CR>
 iab fff <C-R>=expand("%:p")<CR>
 
 " setlocal可以指定只对某一类文件处理
-autocmd FileType go setlocal shiftwidth=4 tabstop=4 sts=4
+" autocmd FileType go setlocal shiftwidth=4 tabstop=4 sts=4
+autocmd FileType java setlocal shiftwidth=4 tabstop=4 sts=4
 
 " au BufRead,BufNewFile *.ejs set filetype=html
 " au BufRead,BufNewFile *.jade set filetype=html
@@ -110,6 +111,7 @@ au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---
 au BufRead,BufNewFile *nginx*.conf,*/nginx/conf.d/*,*/nginx.conf.d/* if &ft == '' | setfiletype nginx | endif
 
 autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
+
 
 " ********************* 以下为go语言相关配置 *********************
 
@@ -143,3 +145,6 @@ nmap <C-L> :GoDefStack<CR>
 filetype plugin indent on " 让vim-go插件正常工作，打开文件类型探测功能，加载文件类型插件，使用文件类型的缩进方式
 
 " ********************* 以上为go语言相关配置 *********************
+
+" let g:indentLine_char = '┆'
+let g:indentLine_fileType = ['yaml', 'json']
