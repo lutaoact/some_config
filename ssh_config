@@ -90,3 +90,23 @@ Host sr
   IdentityFile ~/.ssh/siyuan.pem
   RemoteForward 11111 127.0.0.1:11111
   ExitOnForwardFailure yes
+
+Host prd
+  Hostname 172.31.6.155
+  User deployer
+  IdentityFile ~/.ssh/lls.pem
+#ssh -i ~/.ssh/lls.pem deployer@172.31.6.155
+
+Host me
+  Hostname 127.0.0.1
+  User taolu
+  IdentityFile ~/.ssh/lls.pem
+  LocalForward 3306 127.0.0.1:3277
+  ExitOnForwardFailure yes
+
+Host me2
+  Hostname 127.0.0.1
+  User taolu
+  IdentityFile ~/.ssh/lls.pem
+  LocalForward 6379 127.0.0.1:3277
+  ExitOnForwardFailure yes
