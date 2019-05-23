@@ -91,22 +91,34 @@ Host sr
   RemoteForward 11111 127.0.0.1:11111
   ExitOnForwardFailure yes
 
-Host prd
+Host prod-deploy
   Hostname 172.31.6.155
   User deployer
   IdentityFile ~/.ssh/lls.pem
 #ssh -i ~/.ssh/lls.pem deployer@172.31.6.155
 
+Host nprod-mysql
+  Hostname 10.1.7.33
+  User algo-platform
+  IdentityFile ~/.ssh/lls.pem
+#ssh -i ~/.ssh/lls.pem algo-platform@10.1.7.33
+
+Host prod-mysql
+  Hostname 172.31.11.100
+  User algo-platform
+  IdentityFile ~/.ssh/lls.pem
+#ssh -i ~/.ssh/lls.pem algo-platform@172.31.11.100
+
 Host me
   Hostname 127.0.0.1
   User taolu
   IdentityFile ~/.ssh/lls.pem
-  LocalForward 3306 127.0.0.1:3277
+  LocalForward 3306 127.0.0.1:32777
   ExitOnForwardFailure yes
 
 Host me2
   Hostname 127.0.0.1
   User taolu
   IdentityFile ~/.ssh/lls.pem
-  LocalForward 6379 127.0.0.1:3277
+  LocalForward 6379 127.0.0.1:32776
   ExitOnForwardFailure yes

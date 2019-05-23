@@ -17,6 +17,7 @@
 	helper = osxkeychain
 [diff]
 	tool = vimdiff
+	renameLimit = 10000
 [difftool]
 	prompt = false
 [merge]

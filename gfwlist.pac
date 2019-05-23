@@ -4,6 +4,15 @@
 var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
 
 var rules = [
+  "google.github.io",
+  "earth.google.com",
+  "reddit.com",
+  "aax-eu.amazon-adsystem.com",
+  "fls-eu.amazon.de",
+  "images-eu.ssl-images-amazon.com",
+  "sb.scorecardresearch.com",
+  "i.stack.imgur.com",
+  "cdn.sstatic.net",
   "tunnelblick.net",
   "quora.com",
   "www.google.com",
@@ -25,7 +34,6 @@ var rules = [
   "openx.net",
   "reuters.com",
   "clients5.google.com",
-  "leetcode.com",
   "linux.thai.net",
   "firewalld.org",
   "ftp.pbone.net",

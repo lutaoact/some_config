@@ -63,7 +63,7 @@ nmap <F8> :!python3 %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
 
 " 实现文件跳转，默认从path指定的路径开始查找
-set path=~/go/src,~/qiniu
+set path=vendor,~/go/src,~/kubecfg,/data/backup/git.llsapp.com/common/protos
 nmap gf <C-W>gf
 
 nnoremap * *N
@@ -124,6 +124,8 @@ let g:go_addtags_transform = "camelcase"
 " 在格式化的时候自动导入依赖包
 let g:go_fmt_command = "goimports"
 
+let g:go_def_mode = 'godef'
+
 " 控制打开alternate file的方式，在这里是指go的test文件
 " autocmd Filetype go command! -bang E call go#alternate#Switch(<bang>0, 'edit')
 " autocmd Filetype go command! -bang S call go#alternate#Switch(<bang>0, 'split')
@@ -137,7 +139,7 @@ au FileType go nmap dt <Plug>(go-def-tab)
 " 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
 " let g:go_decls_includes = 'func,type'
 " let g:go_decls_includes = 'func'
-nmap <TAB> :GoDecls<CR>
+nmap <TAB> :GoDeclsDir<CR>
 
 " 列出godef的调用栈
 nmap <C-L> :GoDefStack<CR>
