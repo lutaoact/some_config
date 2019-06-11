@@ -22,7 +22,7 @@ export GPG_TTY=$(tty)
 # export GOROOT=/usr/local/Cellar/go/libexec # go1.9
 export GOROOT=/usr/local/Cellar/go@1.10/1.10.8/libexec/go # go1.10
 
-export GOPATH="$HOME/lls"
+export GOPATH="$HOME/go"
 #export KUBECONFIG="~/private-config/k8s-config.yml"
 export KUBECONFIG="$HOME/.kube/config"
 
@@ -34,8 +34,14 @@ export PERL_HASH_SEED=0x00
 export PERL_PERTURB_KEYS=0
 
 export EDITOR=vim
-export HISTSIZE=10000
-export HISTCONTROL="ignoredups"
+export HISTSIZE=1000
+export HISTFILESIZE=100000
+export HISTCONTROL="ignoreboth:erasedups"
+export HISTIGNORE='pwd:exit:fg:bg:top:clear:cd:ls'
+shopt -s histappend
+
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 ulimit -S -n 10032
 
 export NVM_DIR=~/.nvm
@@ -93,3 +99,6 @@ export OUTPUT_DIR=~/tmp/llsoutput/git.llsapp.com
 
 # ssh key used to pull codes from gitlab (git.llsapp.com)
 export RSA_PRIVATE_KEY=$(cat ~/.ssh/lls.pem)
+
+alias russellauth="kb port-forward deployment/russell-rpc-auth 8080"
+alias russelluser="kb port-forward deployment/russell-rpc-user 8081:8080"
