@@ -34,13 +34,13 @@ export PERL_HASH_SEED=0x00
 export PERL_PERTURB_KEYS=0
 
 export EDITOR=vim
-export HISTSIZE=1000
+export HISTSIZE=10000
 export HISTFILESIZE=100000
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTIGNORE='pwd:exit:fg:bg:top:clear:cd:ls'
 shopt -s histappend
 
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 ulimit -S -n 10032
 

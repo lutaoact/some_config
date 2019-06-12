@@ -23,7 +23,7 @@ set wildmenu
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\/(node_modules|vendor|_site|frontend|qce/models|qce/client)',
+  \ 'dir':  '\v\/(node_modules|vendor|_site|frontend|qce/models|qce/client|ielts_server/tmp)',
   \ }
 
 autocmd InsertLeave * se cul
@@ -97,6 +97,7 @@ iab fff <C-R>=expand("%:p")<CR>
 
 " setlocal可以指定只对某一类文件处理
 " autocmd FileType go setlocal shiftwidth=4 tabstop=4 sts=4
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 sts=4
 
 " au BufRead,BufNewFile *.ejs set filetype=html
@@ -118,13 +119,24 @@ autocmd BufWritePost */tmp/crontab.* w! /data/backup/crontab.conf
 " 不启用list模式，因为有fmt的存在，空白字符不需要可视化
 autocmd FileType go set nolist
 
+" 优化性能，关闭没有太多价值的选项
+let g:go_highlight_structs = 0
+let g:go_highlight_interfaces = 0
+let g:go_highlight_operators = 0
+
 " tag用camelCase的方式显示，默认为snake_case
 let g:go_addtags_transform = "camelcase"
 
 " 在格式化的时候自动导入依赖包
 let g:go_fmt_command = "goimports"
 
-let g:go_def_mode = 'godef'
+" 自动高亮相同的标识符
+let g:go_auto_sameids = 1
+
+" 自动展示go info
+" let g:go_auto_type_info = 1
+
+" let g:go_def_mode = 'godef'
 
 " 控制打开alternate file的方式，在这里是指go的test文件
 " autocmd Filetype go command! -bang E call go#alternate#Switch(<bang>0, 'edit')
@@ -135,6 +147,7 @@ autocmd Filetype go command! -bang T call go#alternate#Switch(<bang>0, 'tabe')
 " 执行GoDef时跳转到新tab或者垂直分割窗口，默认的gd命令是直接在当前窗口中打开
 au FileType go nmap dv <Plug>(go-def-vertical)
 au FileType go nmap dt <Plug>(go-def-tab)
+au FileType go nmap di <Plug>(go-info)
 
 " 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
 " let g:go_decls_includes = 'func,type'
