@@ -37,5 +37,6 @@
 	ps = push
 	pl = pull
 	au = add -u
-	cm = commit
+	cm = commit -m
+	gg = log --graph --all --oneline
 	cmm = commit --amend

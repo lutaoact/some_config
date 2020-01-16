@@ -19,7 +19,11 @@ set cmdheight=3
 set nocursorline
 " set cursorcolumn
 set wildmenu
-" set wildignore+=*/maui/server/common/*.js,*/gale_client/node_modules/gulp*,*/Blackfyre/out/Blackfyre/*,*/blacktest/node_modules/*,*/Blackfyre/node_modules/*,*/gale/node_modules/*,*/maui/node_modules/*,*/budweiser/node_modules/*,*/budweiser/server/test/*.js,*/maui/server/api/*.js,*/budweiser/server/api/*.js,*.map,*.less,*.css,*/bower_components/*,*.scss " for ctrlp.vim
+
+set autoread
+set updatetime=1000
+au CursorHold,CursorHoldI * checktime
+au FocusGained,BufEnter * :checktime
 
 " ctrlp的忽略文件列表定义 \v是vim指令，用于打开very magic
 let g:ctrlp_custom_ignore = {
@@ -59,11 +63,12 @@ nmap <F5> :tabp<CR>
 nmap <F6> :tabn<CR>
 nmap <F7> :!./%<CR>
 nmap <F8> :!python3 %<CR>
-" map <F9> :!coffee %<CR>
+nmap <F9> :!ruby %<CR>
 nmap <F10> :%s/<C-R>//<C-R>"/g<CR>
+nmap cp :let @* = expand("%")<CR>
 
 " 实现文件跳转，默认从path指定的路径开始查找
-set path=vendor,~/go/src,~/kubecfg,/data/backup/git.llsapp.com/common/protos
+set path=vendor,~/go/src,~/kubecfg,~/algo_deploy,/data/backup/git.llsapp.com/common/protos,~/go/src/git.llsapp.com/common/protos
 nmap gf <C-W>gf
 
 nnoremap * *N
@@ -98,6 +103,7 @@ iab fff <C-R>=expand("%:p")<CR>
 " setlocal可以指定只对某一类文件处理
 " autocmd FileType go setlocal shiftwidth=4 tabstop=4 sts=4
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.py setlocal noexpandtab tabstop=2 shiftwidth=2
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 sts=4
 
 " au BufRead,BufNewFile *.ejs set filetype=html
@@ -107,7 +113,6 @@ autocmd FileType java setlocal shiftwidth=4 tabstop=4 sts=4
 au BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile **/etc/nginx/** setfiletype conf
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
-autocmd BufRead,BufNewFile **eslintrc** setfiletype json
 au BufNewFile,BufRead,BufWrite *.markdown syntax match Comment /\%^---\_.\{-}---$/
 au BufRead,BufNewFile *nginx*.conf,*/nginx/conf.d/*,*/nginx.conf.d/* if &ft == '' | setfiletype nginx | endif
 
@@ -125,13 +130,13 @@ let g:go_highlight_interfaces = 0
 let g:go_highlight_operators = 0
 
 " tag用camelCase的方式显示，默认为snake_case
-let g:go_addtags_transform = "camelcase"
+" let g:go_addtags_transform = "camelcase"
 
 " 在格式化的时候自动导入依赖包
 let g:go_fmt_command = "goimports"
 
 " 自动高亮相同的标识符
-let g:go_auto_sameids = 1
+" let g:go_auto_sameids = 1
 
 " 自动展示go info
 " let g:go_auto_type_info = 1
@@ -145,9 +150,9 @@ autocmd Filetype go command! -bang V call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang T call go#alternate#Switch(<bang>0, 'tabe')
 
 " 执行GoDef时跳转到新tab或者垂直分割窗口，默认的gd命令是直接在当前窗口中打开
-au FileType go nmap dv <Plug>(go-def-vertical)
-au FileType go nmap dt <Plug>(go-def-tab)
-au FileType go nmap di <Plug>(go-info)
+au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <leader>dt <Plug>(go-def-tab)
+au FileType go nmap <leader>di <Plug>(go-info)
 
 " 列出所有的标识符，默认包括func和type，可以通过以下配置项来修改
 " let g:go_decls_includes = 'func,type'
@@ -155,11 +160,11 @@ au FileType go nmap di <Plug>(go-info)
 nmap <TAB> :GoDeclsDir<CR>
 
 " 列出godef的调用栈
-nmap <C-L> :GoDefStack<CR>
+" nmap <C-L> :GoDefStack<CR>
 
 filetype plugin indent on " 让vim-go插件正常工作，打开文件类型探测功能，加载文件类型插件，使用文件类型的缩进方式
 
 " ********************* 以上为go语言相关配置 *********************
 
 " let g:indentLine_char = '┆'
-let g:indentLine_fileType = ['yaml', 'json']
+let g:indentLine_fileType = ['yaml', 'json', 'ruby', 'jsonnet']
